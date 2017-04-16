@@ -44,19 +44,18 @@ cps.public = {
             var winScrT = $this.scrollTop();
             if (winScrT > $headH) {
                 $fixHead.css('top', 0);
-                // $fixHead.animate({top:0,easing:'normal',duration:200});
 
             } else {
                 $fixHead.css('top', -50);
-                // $fixHead.animate({top:-50,easing:'normal',duration:200});
             }
-            if(beforeTop<winScrT){
-                console.log('down');
-                $headH.css('rotateX')
-            }else{
-                console.log('up');
-            }
-            beforeTop = winScrT;
+            //head animation---tbc
+            // if(beforeTop<winScrT){
+            //     console.log('down');
+            //     // $headH.css('rotateX')
+            // }else{
+            //     console.log('up');
+            // }
+            // beforeTop = winScrT;
         })
     },
     headSwiper: function () {

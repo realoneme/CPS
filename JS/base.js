@@ -7,13 +7,17 @@ cps.public = {
     init: function () {
         var that = this;
         that.headSwiper();
-        // that.slideSideBar();
         that.tabAnime();
         that.tabChange();
+        that.fixSideIcons.call($(window));
+        that.slideFade();
         that.stickSideBar();
-        that.attachHead();
+        that.scrollEvent();
+        that.goTop();
+        that.swiperWords();
     },
     stickSideBar: function () {
+        var t = this;
         var $sideBar = $('.J_sidebar');
         var screenH = $('body').outerHeight();
         $sideBar.height(screenH);
@@ -25,29 +29,71 @@ cps.public = {
 
         }
         $(window).resize(function () {
+            t.fixSideIcons.call($(window));
             if ($(this).width() < 1235) {
                 $sideBar.css('width', 0);
 
             } else if ($(this).width() >= 1235) {
                 $sideBar.css('width', 35);
             }
+        });
+    },
+    slideFade: function () {
+        var slideBlock = $('.J_slidefade');
+        var slideList = $('.J_side-list');
+        var sideListWrapper = $('.side-list_box');
+        var t;
+        slideList.hover(function () {
+            if (t) {
+                clearTimeout(t);
+            }
+            $(this).children(slideBlock).css({left: '-90px', opacity: 1});
+            sideListWrapper.css('overflow', 'visible');
+        }, function () {
+            $(this).children(slideBlock).css({left: '-140px', opacity: 0});
+            clearTimeout(t);
+            t = setTimeout(function () {
+                sideListWrapper.css('overflow', 'hidden');
+            }, 300);
         })
     },
-    attachHead: function () {
-        var $fixHead = $('#J-attachedhead');
-        var $head = $('.header');
-        var $headOpa = $head.css('opacity');
-        var $headH = $head.outerHeight();
-        var beforeTop = $(window).scrollTop();
-        $(window).on('scroll', function () {
-            var $this = $(this);
-            var winScrT = $this.scrollTop();
-            if (winScrT > $headH) {
-                $fixHead.css('top', 0);
+    fixSideIcons: function () {
+        var $listBox = $('.J_side_userbox'),
+            $listFnBox = $('.J_side_fnbox');
 
-            } else {
-                $fixHead.css('top', -50);
+        var $winH = $(this).outerHeight();
+        var t = ($winH - $listBox.outerHeight()) / 2;
+
+        $listBox.css('top', t);
+        $listFnBox.css('bottom', 0);
+
+    },
+    goTop: function () {
+        var $toTopBtn = $('.J-totop');
+        $toTopBtn.on('click', function () {
+            // $('body').scrollTop(0);
+            // $('body').animate({scrollTop:'0px'},800,'easeInSine');
+            $("html,body").animate({scrollTop: 0}, 300, 'easeInOutSine');
+        })
+    },
+    scrollEvent: function () {
+        var $fixHead = $('#J-attachedhead'),
+            $head = $('.header'),
+            $toTopBtn = $('.J-totop');
+        var $headH = $head.outerHeight();
+        // var beforeTop = $(window).scrollTop();
+        var t = this;
+        $(window).on('scroll', function () {
+            var winScTop = $(this).scrollTop();
+            var $this = $(this);
+            fixhead.call($this);//固定头
+            //隐藏显示回到顶部图标
+            if (winScTop < 200) {
+                $toTopBtn.fadeOut(100);
+            } else if (winScTop >= 200) {
+                $toTopBtn.fadeIn(100);
             }
+            // t.goTop.call($this);//回到顶部控制
             //head animation---tbc
             // if(beforeTop<winScrT){
             //     console.log('down');
@@ -56,7 +102,16 @@ cps.public = {
             //     console.log('up');
             // }
             // beforeTop = winScrT;
-        })
+        });
+        function fixhead() {
+            var winScrT = $(this).scrollTop();
+            if (winScrT > $headH) {
+                $fixHead.css('top', 0);
+            } else {
+                $fixHead.css('top', -50);
+            }
+        }
+
     },
     headSwiper: function () {
         //get doms
@@ -156,7 +211,7 @@ cps.public = {
             $arrow.animate({opacity: 0.3}, 'normal');
         });
         function arrowControl() {
-            $('.J_left').on('click', function () {
+            $('.arrow.J_left').on('click', function () {
                 if (oBanner.step == 0) {
                     oBanner.step = $imgs.length - 1;
                     $bannerBox.css('left', (oBanner.step) * -bannerWidth);
@@ -164,7 +219,7 @@ cps.public = {
                 oBanner.step--;
                 autoMove(oBanner.step);
             });
-            $('.J_right').on('click', function () {
+            $('.arrow.J_right').on('click', function () {
                 autoMove();
             })
         }
@@ -250,6 +305,66 @@ cps.public = {
             });
 
         })
+    },
+    swiperWords: function () {
+        var arrowL = $('.J_swiperblock').find('.J_left'),
+            arrowR = $('.J_swiperblock').find('.J_right');
+        var conTitle = $('.goodwords__title'),
+            conPar = $('.goodwords__par'),
+            conUrl = $('.J_arturl');
+        var url = './data/artdata.json?=' + new Date();
+        $.ajax({
+            type: 'get',
+            dataType: 'json',
+            cache: false,
+            url: url,
+            success: function (result) {
+                var dt = result[0].title,
+                    dd = result[0].cont,
+                    du = result[0].url;
+                conTitle.html(dt);
+                conPar.html(dd);
+                conUrl.get(0).href = du;
+                changeData(result);
+                // $.each(result,function () {
+                //
+                //     var dataTitle = this.title,
+                //         dataCont = this.cont;
+                //     conTitle.html(dataTitle);
+                //     conPar.html(dataCont);
+                // })
+
+            }
+        });
+        function changeData(data) {
+            var len = data.length;
+            var st = 0;
+            var dt, dd,du;
+
+            arrowL.on('click', function () {
+                st--;
+                console.log(st);
+                if (st < 0) {
+                    st = data.length-1;
+                }
+                showData(data);
+            });
+            arrowR.on('click', function () {
+                st++;
+                if (st > len-1) {
+                    st = 0;
+                }
+                showData(data);
+            });
+            function showData(d) {
+                dt = d[st].title;
+                dd = d[st].cont;
+                du = d[st].url;
+                conTitle.html(dt);
+                conPar.html(dd);
+                conUrl.get(st).href = du;
+            }
+        }
     }
 };
 $(function () {

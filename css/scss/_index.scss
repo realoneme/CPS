@@ -130,20 +130,21 @@
   z-index: 6;
   margin-top: -30px;
   top: 50%;
+  &.J_left {
+    left: 18px;
+  }
+
+  &.J_right {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    right: 18px;
+  }
 }
 
-.J_left {
-  left: 18px;
-}
 
-.J_right {
-  transform: rotate(180deg);
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  right: 18px;
-}
 //common index
 .cont-block{
   width:1200px;
@@ -263,12 +264,14 @@
   .goodwords__par{
     font-size: 14px;
     line-height: 22px;
+    height: 88px;
+    overflow-y: auto;
   }
   .cont-block__box{
     border: 1px solid $basicColor;
     border-radius: 5px;
     padding:25px;
-    height: 120px;
+    height: 140px;
   }
   .dot-arrow{
     position: absolute;

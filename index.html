@@ -7,16 +7,17 @@
     <link rel="stylesheet" href="css/scss/base.css">
 </head>
 <body>
-<div class="header">
+<div class="header J_header">
     <!--logo-->
     <div class="header-cont clearfix">
         <a href="index.html" class="a-home">
             <div class="logo"></div>
+            <div class="sticklogo"></div>
         </a>
         <!--nav-->
         <ul class="mainNav">
             <!--<li class="navs">-->
-                <!--<a href="" class="nav_link">收藏文库</a>-->
+            <!--<a href="" class="nav_link">收藏文库</a>-->
             <!--</li>-->
             <li class="navs">
                 <a href="" class="nav_link">热门西皮</a>
@@ -34,7 +35,10 @@
         <!--search-->
         <form action="" class="nav-search" id="nav-search" name="site-search">
             <div class="search-fill">
-                <input type="text" name="textsearch" id="textsearch" class="textsearch" placeholder="搜搜你的心头好">
+                <input type="text" name="textsearch" id="textsearch" class="textsearch J_textsearch"
+                       placeholder="搜搜你的心头好" autocomplete="off">
+                <ul class="searchsuggest head-suggest">
+                </ul>
             </div>
             <div class="search-right clearfix">
                 <span class="searchGo">GO!</span>
@@ -42,28 +46,47 @@
             </div>
         </form>
         <!--login-->
-        <div class="nav-login">
-            <span class="thumbnailbox">
+        <div class="nav-login J_navlogin">
+            <span class="thumbnailbox J_menuhover">
                 <img src="images/defaultsn.jpg" alt="" width="50" height="50">
             </span>
-            <!--以下部分切换登录或者未登录状态-->
-            <!--<div class="tologin">-->
-                <!--<a href="" class="loginbtn J-login">登录</a>-->
-                <!--<a href="" class="signinbtn J-signin">注册</a>-->
-            <!--</div>-->
-            <div class="tologin">
-                <a href="" class="loginbtn">撸文</a>
-                <a href="" class="signinbtn">求文</a>
-            </div>
-            <div class="nav-login_profile">
+            <div class="nav-login_profile J_downmenu">
+                <div class="nav-login_kernel">
+                    <!--以下部分切换登录或者未登录状态-->
+                    <!--<a href=""><div class="nav-login_list">登录</div></a>-->
+                    <!--<a href=""><div class="nav-login_list">注册</div></a>-->
+                    <a href="">
+                        <div class="nav-login_list">开坑撸文</div>
+                    </a>
+                    <a href="">
+                        <div class="nav-login_list">不吃牢饭求个文</div>
+                    </a>
+                </div>
+                <div class="nav-login_upper">
+                    <a href="">
+                        <div class="nav-login_list">我的资料</div>
+                    </a>
+                    <a href="">
+                        <div class="nav-login_list">被我标记的和标记我的人</div>
+                    </a>
 
+                    <a href="">
+                        <div class="nav-login_list">革命尚未成功</div>
+                    </a>
+                    <a href="">
+                        <div class="nav-login_list">填完的坑</div>
+                    </a>
+                </div>
+                <div class="nav-login_down">
+                    <a href="">
+                        <div class="nav-login_list">退出登录</div>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
+</div>
 
-</div>
-<div class="attachedHeader" id="J-attachedhead">
-</div>
 <div class="container">
     <!--advertisement and banner-->
     <div class="cont-advbanner">
@@ -91,13 +114,13 @@
                 </div>
                 <ul class="focus">
                 </ul>
-                    <a href="javascript:;" class="arrow J_left">&#xe60e;</a>
-                    <a href="javascript:;" class="arrow J_right">&#xe60e;</a>
+                <a href="javascript:;" class="arrow J_left">&#xe60e;</a>
+                <a href="javascript:;" class="arrow J_right">&#xe60e;</a>
             </div>
         </div>
     </div>
     <!--recommend books by class-->
-    <div class="cont-classpick cont-block">
+    <div class="cont-classpick cont-block J_cont-classpick">
         <h2 class="cont-block__title">太太公开新作</h2>
         <ul class="cont-classtitle">
             <li class="classtitle_tabs cur J_tabtitle"><a href="javascript:;">英剧</a></li>
@@ -120,7 +143,168 @@
                                 传承着一种“禅”的精神。只有你努力成长，才会方法得当，培养出的孩子自主能力就强，你的辛苦程度就会越来越低.1 从妖风
                                 河岸的郭家寺南行十二里，有一个叫孙蒋的小村庄，这小村庄之所以叫孙蒋村.获得标记喜欢♥最多的前5名豆友奖励 →个人肖像定制装饰画一幅←
                                 奖品由→你发我画股份有限公司←提供 （特别注意→被发现刷票作弊不符合活动规则一律无效）
-                                奖品详见本活动主图→吉祥物树树← 手上的画 ♡(ฅ•ω•ฅ)♡  </li>
+                                奖品详见本活动主图→吉祥物树树← 手上的画 ♡(ฅ•ω•ฅ)♡
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </a>
+
+            <a href="">
+                <div class="cont-classcontlist">
+                    <img src="images/block10.jpg" alt="" class="classcontlist-img">
+                    <!--mask-->
+                    <div class="list-intro J-mask">
+                        <h3 class="list-intro__title">冷火</h3>
+                        <ul>
+                            <li class="list-intro__info">作者：信哥哥</li>
+                            <li class="list-intro__info">英剧/BL/PG-18/BE/重要角色死亡</li>
+                            <li class="list-intro__cont">你是灿烂阳光的冬季某种程度上或许可以说，谷口治郎的《散步去》正是以漫画的形式为载体，
+                                传承着一种“禅”的精神。只有你努力成长，才会方法得当，培养出的孩子自主能力就强，你的辛苦程度就会越来越低.1 从妖风
+                                河岸的郭家寺南行十二里，有一个叫孙蒋的小村庄，这小村庄之所以叫孙蒋村.获得标记喜欢♥最多的前5名豆友奖励 →个人肖像定制装饰画一幅←
+                                奖品由→你发我画股份有限公司←提供 （特别注意→被发现刷票作弊不符合活动规则一律无效）
+                                奖品详见本活动主图→吉祥物树树← 手上的画 ♡(ฅ•ω•ฅ)♡
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </a>
+            <a href="">
+                <div class="cont-classcontlist">
+                    <img src="images/block6.jpg" alt="" class="classcontlist-img">
+                    <!--mask-->
+                    <div class="list-intro J-mask">
+                        <h3 class="list-intro__title">冷火</h3>
+                        <ul>
+                            <li class="list-intro__info">作者：信哥哥</li>
+                            <li class="list-intro__info">英剧/BL/PG-18/BE/重要角色死亡</li>
+                            <li class="list-intro__cont">你是灿烂阳光的冬季某种程度上或许可以说，谷口治郎的《散步去》正是以漫画的形式为载体，
+                                传承着一种“禅”的精神。只有你努力成长，才会方法得当，培养出的孩子自主能力就强，你的辛苦程度就会越来越低.1 从妖风
+                                河岸的郭家寺南行十二里，有一个叫孙蒋的小村庄，这小村庄之所以叫孙蒋村.获得标记喜欢♥最多的前5名豆友奖励 →个人肖像定制装饰画一幅←
+                                奖品由→你发我画股份有限公司←提供 （特别注意→被发现刷票作弊不符合活动规则一律无效）
+                                奖品详见本活动主图→吉祥物树树← 手上的画 ♡(ฅ•ω•ฅ)♡
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </a>
+            <a href="">
+                <div class="cont-classcontlist">
+                    <img src="images/block4.jpg" alt="" class="classcontlist-img">
+                    <!--mask-->
+                    <div class="list-intro J-mask">
+                        <h3 class="list-intro__title">冷火</h3>
+                        <ul>
+                            <li class="list-intro__info">作者：信哥哥</li>
+                            <li class="list-intro__info">英剧/BL/PG-18/BE/重要角色死亡</li>
+                            <li class="list-intro__cont">你是灿烂阳光的冬季某种程度上或许可以说，谷口治郎的《散步去》正是以漫画的形式为载体，
+                                传承着一种“禅”的精神。只有你努力成长，才会方法得当，培养出的孩子自主能力就强，你的辛苦程度就会越来越低.1 从妖风
+                                河岸的郭家寺南行十二里，有一个叫孙蒋的小村庄，这小村庄之所以叫孙蒋村.获得标记喜欢♥最多的前5名豆友奖励 →个人肖像定制装饰画一幅←
+                                奖品由→你发我画股份有限公司←提供 （特别注意→被发现刷票作弊不符合活动规则一律无效）
+                                奖品详见本活动主图→吉祥物树树← 手上的画 ♡(ฅ•ω•ฅ)♡
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+        <div class="cont-classcontents J_tablist">
+            <a href="">
+                <div class="cont-classcontlist">
+                    <img src="images/block8.jpg" alt="" class="classcontlist-img">
+                    <!--mask-->
+                    <div class="list-intro J-mask">
+                        <h3 class="list-intro__title">冷火</h3>
+                        <ul>
+                            <li class="list-intro__info">作者：信哥哥</li>
+                            <li class="list-intro__info">英剧/BL/PG-18/BE/重要角色死亡</li>
+                            <li class="list-intro__cont">你是灿烂阳光的冬季某种程度上或许可以说，谷口治郎的《散步去》正是以漫画的形式为载体，
+                                传承着一种“禅”的精神。只有你努力成长，才会方法得当，培养出的孩子自主能力就强，你的辛苦程度就会越来越低.1 从妖风
+                                河岸的郭家寺南行十二里，有一个叫孙蒋的小村庄，这小村庄之所以叫孙蒋村.获得标记喜欢♥最多的前5名豆友奖励 →个人肖像定制装饰画一幅←
+                                奖品由→你发我画股份有限公司←提供 （特别注意→被发现刷票作弊不符合活动规则一律无效）
+                                奖品详见本活动主图→吉祥物树树← 手上的画 ♡(ฅ•ω•ฅ)♡
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </a>
+
+            <a href="">
+                <div class="cont-classcontlist">
+                    <img src="images/block7.jpg" alt="" class="classcontlist-img">
+                    <!--mask-->
+                    <div class="list-intro J-mask">
+                        <h3 class="list-intro__title">冷火</h3>
+                        <ul>
+                            <li class="list-intro__info">作者：信哥哥</li>
+                            <li class="list-intro__info">英剧/BL/PG-18/BE/重要角色死亡</li>
+                            <li class="list-intro__cont">你是灿烂阳光的冬季某种程度上或许可以说，谷口治郎的《散步去》正是以漫画的形式为载体，
+                                传承着一种“禅”的精神。只有你努力成长，才会方法得当，培养出的孩子自主能力就强，你的辛苦程度就会越来越低.1 从妖风
+                                河岸的郭家寺南行十二里，有一个叫孙蒋的小村庄，这小村庄之所以叫孙蒋村.获得标记喜欢♥最多的前5名豆友奖励 →个人肖像定制装饰画一幅←
+                                奖品由→你发我画股份有限公司←提供 （特别注意→被发现刷票作弊不符合活动规则一律无效）
+                                奖品详见本活动主图→吉祥物树树← 手上的画 ♡(ฅ•ω•ฅ)♡
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </a>
+            <a href="">
+                <div class="cont-classcontlist">
+                    <img src="images/block9.jpg" alt="" class="classcontlist-img">
+                    <!--mask-->
+                    <div class="list-intro J-mask">
+                        <h3 class="list-intro__title">冷火</h3>
+                        <ul>
+                            <li class="list-intro__info">作者：信哥哥</li>
+                            <li class="list-intro__info">英剧/BL/PG-18/BE/重要角色死亡</li>
+                            <li class="list-intro__cont">你是灿烂阳光的冬季某种程度上或许可以说，谷口治郎的《散步去》正是以漫画的形式为载体，
+                                传承着一种“禅”的精神。只有你努力成长，才会方法得当，培养出的孩子自主能力就强，你的辛苦程度就会越来越低.1 从妖风
+                                河岸的郭家寺南行十二里，有一个叫孙蒋的小村庄，这小村庄之所以叫孙蒋村.获得标记喜欢♥最多的前5名豆友奖励 →个人肖像定制装饰画一幅←
+                                奖品由→你发我画股份有限公司←提供 （特别注意→被发现刷票作弊不符合活动规则一律无效）
+                                奖品详见本活动主图→吉祥物树树← 手上的画 ♡(ฅ•ω•ฅ)♡
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </a>
+            <a href="">
+                <div class="cont-classcontlist">
+                    <img src="images/block19.jpg" alt="" class="classcontlist-img">
+                    <!--mask-->
+                    <div class="list-intro J-mask">
+                        <h3 class="list-intro__title">冷火</h3>
+                        <ul>
+                            <li class="list-intro__info">作者：信哥哥</li>
+                            <li class="list-intro__info">英剧/BL/PG-18/BE/重要角色死亡</li>
+                            <li class="list-intro__cont">你是灿烂阳光的冬季某种程度上或许可以说，谷口治郎的《散步去》正是以漫画的形式为载体，
+                                传承着一种“禅”的精神。只有你努力成长，才会方法得当，培养出的孩子自主能力就强，你的辛苦程度就会越来越低.1 从妖风
+                                河岸的郭家寺南行十二里，有一个叫孙蒋的小村庄，这小村庄之所以叫孙蒋村.获得标记喜欢♥最多的前5名豆友奖励 →个人肖像定制装饰画一幅←
+                                奖品由→你发我画股份有限公司←提供 （特别注意→被发现刷票作弊不符合活动规则一律无效）
+                                奖品详见本活动主图→吉祥物树树← 手上的画 ♡(ฅ•ω•ฅ)♡
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+        <div class="cont-classcontents J_tablist">
+            <a href="">
+                <div class="cont-classcontlist">
+                    <img src="images/block4.jpg" alt="" class="classcontlist-img">
+                    <!--mask-->
+                    <div class="list-intro J-mask">
+                        <h3 class="list-intro__title">冷火</h3>
+                        <ul>
+                            <li class="list-intro__info">作者：信哥哥</li>
+                            <li class="list-intro__info">英剧/BL/PG-18/BE/重要角色死亡</li>
+                            <li class="list-intro__cont">你是灿烂阳光的冬季某种程度上或许可以说，谷口治郎的《散步去》正是以漫画的形式为载体，
+                                传承着一种“禅”的精神。只有你努力成长，才会方法得当，培养出的孩子自主能力就强，你的辛苦程度就会越来越低.1 从妖风
+                                河岸的郭家寺南行十二里，有一个叫孙蒋的小村庄，这小村庄之所以叫孙蒋村.获得标记喜欢♥最多的前5名豆友奖励 →个人肖像定制装饰画一幅←
+                                奖品由→你发我画股份有限公司←提供 （特别注意→被发现刷票作弊不符合活动规则一律无效）
+                                奖品详见本活动主图→吉祥物树树← 手上的画 ♡(ฅ•ω•ฅ)♡
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -139,7 +323,8 @@
                                 传承着一种“禅”的精神。只有你努力成长，才会方法得当，培养出的孩子自主能力就强，你的辛苦程度就会越来越低.1 从妖风
                                 河岸的郭家寺南行十二里，有一个叫孙蒋的小村庄，这小村庄之所以叫孙蒋村.获得标记喜欢♥最多的前5名豆友奖励 →个人肖像定制装饰画一幅←
                                 奖品由→你发我画股份有限公司←提供 （特别注意→被发现刷票作弊不符合活动规则一律无效）
-                                奖品详见本活动主图→吉祥物树树← 手上的画 ♡(ฅ•ω•ฅ)♡  </li>
+                                奖品详见本活动主图→吉祥物树树← 手上的画 ♡(ฅ•ω•ฅ)♡
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -157,32 +342,12 @@
                                 传承着一种“禅”的精神。只有你努力成长，才会方法得当，培养出的孩子自主能力就强，你的辛苦程度就会越来越低.1 从妖风
                                 河岸的郭家寺南行十二里，有一个叫孙蒋的小村庄，这小村庄之所以叫孙蒋村.获得标记喜欢♥最多的前5名豆友奖励 →个人肖像定制装饰画一幅←
                                 奖品由→你发我画股份有限公司←提供 （特别注意→被发现刷票作弊不符合活动规则一律无效）
-                                奖品详见本活动主图→吉祥物树树← 手上的画 ♡(ฅ•ω•ฅ)♡  </li>
+                                奖品详见本活动主图→吉祥物树树← 手上的画 ♡(ฅ•ω•ฅ)♡
+                            </li>
                         </ul>
                     </div>
                 </div>
             </a>
-            <a href="">
-                <div class="cont-classcontlist">
-                    <img src="images/block4.jpg" alt="" class="classcontlist-img">
-                    <!--mask-->
-                    <div class="list-intro J-mask">
-                        <h3 class="list-intro__title">冷火</h3>
-                        <ul>
-                            <li class="list-intro__info">作者：信哥哥</li>
-                            <li class="list-intro__info">英剧/BL/PG-18/BE/重要角色死亡</li>
-                            <li class="list-intro__cont">你是灿烂阳光的冬季某种程度上或许可以说，谷口治郎的《散步去》正是以漫画的形式为载体，
-                                传承着一种“禅”的精神。只有你努力成长，才会方法得当，培养出的孩子自主能力就强，你的辛苦程度就会越来越低.1 从妖风
-                                河岸的郭家寺南行十二里，有一个叫孙蒋的小村庄，这小村庄之所以叫孙蒋村.获得标记喜欢♥最多的前5名豆友奖励 →个人肖像定制装饰画一幅←
-                                奖品由→你发我画股份有限公司←提供 （特别注意→被发现刷票作弊不符合活动规则一律无效）
-                                奖品详见本活动主图→吉祥物树树← 手上的画 ♡(ฅ•ω•ฅ)♡  </li>
-                        </ul>
-                    </div>
-                </div>
-            </a>
-
-        </div>
-        <div class="cont-classcontents J_tablist">
             <a href="">
                 <div class="cont-classcontlist">
                     <img src="images/block3.jpg" alt="" class="classcontlist-img">
@@ -196,30 +361,15 @@
                                 传承着一种“禅”的精神。只有你努力成长，才会方法得当，培养出的孩子自主能力就强，你的辛苦程度就会越来越低.1 从妖风
                                 河岸的郭家寺南行十二里，有一个叫孙蒋的小村庄，这小村庄之所以叫孙蒋村.获得标记喜欢♥最多的前5名豆友奖励 →个人肖像定制装饰画一幅←
                                 奖品由→你发我画股份有限公司←提供 （特别注意→被发现刷票作弊不符合活动规则一律无效）
-                                奖品详见本活动主图→吉祥物树树← 手上的画 ♡(ฅ•ω•ฅ)♡  </li>
+                                奖品详见本活动主图→吉祥物树树← 手上的画 ♡(ฅ•ω•ฅ)♡
+                            </li>
                         </ul>
                     </div>
                 </div>
             </a>
 
-            <a href="">
-                <div class="cont-classcontlist">
-                    <img src="images/block6.jpg" alt="" class="classcontlist-img">
-                    <!--mask-->
-                    <div class="list-intro J-mask">
-                        <h3 class="list-intro__title">冷火</h3>
-                        <ul>
-                            <li class="list-intro__info">作者：信哥哥</li>
-                            <li class="list-intro__info">英剧/BL/PG-18/BE/重要角色死亡</li>
-                            <li class="list-intro__cont">你是灿烂阳光的冬季某种程度上或许可以说，谷口治郎的《散步去》正是以漫画的形式为载体，
-                                传承着一种“禅”的精神。只有你努力成长，才会方法得当，培养出的孩子自主能力就强，你的辛苦程度就会越来越低.1 从妖风
-                                河岸的郭家寺南行十二里，有一个叫孙蒋的小村庄，这小村庄之所以叫孙蒋村.获得标记喜欢♥最多的前5名豆友奖励 →个人肖像定制装饰画一幅←
-                                奖品由→你发我画股份有限公司←提供 （特别注意→被发现刷票作弊不符合活动规则一律无效）
-                                奖品详见本活动主图→吉祥物树树← 手上的画 ♡(ฅ•ω•ฅ)♡  </li>
-                        </ul>
-                    </div>
-                </div>
-            </a>
+        </div>
+        <div class="cont-classcontents J_tablist">
             <a href="">
                 <div class="cont-classcontlist">
                     <img src="images/block2.jpg" alt="" class="classcontlist-img">
@@ -233,7 +383,28 @@
                                 传承着一种“禅”的精神。只有你努力成长，才会方法得当，培养出的孩子自主能力就强，你的辛苦程度就会越来越低.1 从妖风
                                 河岸的郭家寺南行十二里，有一个叫孙蒋的小村庄，这小村庄之所以叫孙蒋村.获得标记喜欢♥最多的前5名豆友奖励 →个人肖像定制装饰画一幅←
                                 奖品由→你发我画股份有限公司←提供 （特别注意→被发现刷票作弊不符合活动规则一律无效）
-                                奖品详见本活动主图→吉祥物树树← 手上的画 ♡(ฅ•ω•ฅ)♡  </li>
+                                奖品详见本活动主图→吉祥物树树← 手上的画 ♡(ฅ•ω•ฅ)♡
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </a>
+
+            <a href="">
+                <div class="cont-classcontlist">
+                    <img src="images/block5.jpg" alt="" class="classcontlist-img">
+                    <!--mask-->
+                    <div class="list-intro J-mask">
+                        <h3 class="list-intro__title">冷火</h3>
+                        <ul>
+                            <li class="list-intro__info">作者：信哥哥</li>
+                            <li class="list-intro__info">英剧/BL/PG-18/BE/重要角色死亡</li>
+                            <li class="list-intro__cont">你是灿烂阳光的冬季某种程度上或许可以说，谷口治郎的《散步去》正是以漫画的形式为载体，
+                                传承着一种“禅”的精神。只有你努力成长，才会方法得当，培养出的孩子自主能力就强，你的辛苦程度就会越来越低.1 从妖风
+                                河岸的郭家寺南行十二里，有一个叫孙蒋的小村庄，这小村庄之所以叫孙蒋村.获得标记喜欢♥最多的前5名豆友奖励 →个人肖像定制装饰画一幅←
+                                奖品由→你发我画股份有限公司←提供 （特别注意→被发现刷票作弊不符合活动规则一律无效）
+                                奖品详见本活动主图→吉祥物树树← 手上的画 ♡(ฅ•ω•ฅ)♡
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -251,141 +422,8 @@
                                 传承着一种“禅”的精神。只有你努力成长，才会方法得当，培养出的孩子自主能力就强，你的辛苦程度就会越来越低.1 从妖风
                                 河岸的郭家寺南行十二里，有一个叫孙蒋的小村庄，这小村庄之所以叫孙蒋村.获得标记喜欢♥最多的前5名豆友奖励 →个人肖像定制装饰画一幅←
                                 奖品由→你发我画股份有限公司←提供 （特别注意→被发现刷票作弊不符合活动规则一律无效）
-                                奖品详见本活动主图→吉祥物树树← 手上的画 ♡(ฅ•ω•ฅ)♡  </li>
-                        </ul>
-                    </div>
-                </div>
-            </a>
-
-        </div>
-        <div class="cont-classcontents J_tablist">
-            <a href="">
-                <div class="cont-classcontlist">
-                    <img src="images/block4.jpg" alt="" class="classcontlist-img">
-                    <!--mask-->
-                    <div class="list-intro J-mask">
-                        <h3 class="list-intro__title">冷火</h3>
-                        <ul>
-                            <li class="list-intro__info">作者：信哥哥</li>
-                            <li class="list-intro__info">英剧/BL/PG-18/BE/重要角色死亡</li>
-                            <li class="list-intro__cont">你是灿烂阳光的冬季某种程度上或许可以说，谷口治郎的《散步去》正是以漫画的形式为载体，
-                                传承着一种“禅”的精神。只有你努力成长，才会方法得当，培养出的孩子自主能力就强，你的辛苦程度就会越来越低.1 从妖风
-                                河岸的郭家寺南行十二里，有一个叫孙蒋的小村庄，这小村庄之所以叫孙蒋村.获得标记喜欢♥最多的前5名豆友奖励 →个人肖像定制装饰画一幅←
-                                奖品由→你发我画股份有限公司←提供 （特别注意→被发现刷票作弊不符合活动规则一律无效）
-                                奖品详见本活动主图→吉祥物树树← 手上的画 ♡(ฅ•ω•ฅ)♡  </li>
-                        </ul>
-                    </div>
-                </div>
-            </a>
-
-            <a href="">
-                <div class="cont-classcontlist">
-                    <img src="images/block5.jpg" alt="" class="classcontlist-img">
-                    <!--mask-->
-                    <div class="list-intro J-mask">
-                        <h3 class="list-intro__title">冷火</h3>
-                        <ul>
-                            <li class="list-intro__info">作者：信哥哥</li>
-                            <li class="list-intro__info">英剧/BL/PG-18/BE/重要角色死亡</li>
-                            <li class="list-intro__cont">你是灿烂阳光的冬季某种程度上或许可以说，谷口治郎的《散步去》正是以漫画的形式为载体，
-                                传承着一种“禅”的精神。只有你努力成长，才会方法得当，培养出的孩子自主能力就强，你的辛苦程度就会越来越低.1 从妖风
-                                河岸的郭家寺南行十二里，有一个叫孙蒋的小村庄，这小村庄之所以叫孙蒋村.获得标记喜欢♥最多的前5名豆友奖励 →个人肖像定制装饰画一幅←
-                                奖品由→你发我画股份有限公司←提供 （特别注意→被发现刷票作弊不符合活动规则一律无效）
-                                奖品详见本活动主图→吉祥物树树← 手上的画 ♡(ฅ•ω•ฅ)♡  </li>
-                        </ul>
-                    </div>
-                </div>
-            </a>
-            <a href="">
-                <div class="cont-classcontlist">
-                    <img src="images/block6.jpg" alt="" class="classcontlist-img">
-                    <!--mask-->
-                    <div class="list-intro J-mask">
-                        <h3 class="list-intro__title">冷火</h3>
-                        <ul>
-                            <li class="list-intro__info">作者：信哥哥</li>
-                            <li class="list-intro__info">英剧/BL/PG-18/BE/重要角色死亡</li>
-                            <li class="list-intro__cont">你是灿烂阳光的冬季某种程度上或许可以说，谷口治郎的《散步去》正是以漫画的形式为载体，
-                                传承着一种“禅”的精神。只有你努力成长，才会方法得当，培养出的孩子自主能力就强，你的辛苦程度就会越来越低.1 从妖风
-                                河岸的郭家寺南行十二里，有一个叫孙蒋的小村庄，这小村庄之所以叫孙蒋村.获得标记喜欢♥最多的前5名豆友奖励 →个人肖像定制装饰画一幅←
-                                奖品由→你发我画股份有限公司←提供 （特别注意→被发现刷票作弊不符合活动规则一律无效）
-                                奖品详见本活动主图→吉祥物树树← 手上的画 ♡(ฅ•ω•ฅ)♡  </li>
-                        </ul>
-                    </div>
-                </div>
-            </a>
-            <a href="">
-                <div class="cont-classcontlist">
-                    <img src="images/block3.jpg" alt="" class="classcontlist-img">
-                    <!--mask-->
-                    <div class="list-intro J-mask">
-                        <h3 class="list-intro__title">冷火</h3>
-                        <ul>
-                            <li class="list-intro__info">作者：信哥哥</li>
-                            <li class="list-intro__info">英剧/BL/PG-18/BE/重要角色死亡</li>
-                            <li class="list-intro__cont">你是灿烂阳光的冬季某种程度上或许可以说，谷口治郎的《散步去》正是以漫画的形式为载体，
-                                传承着一种“禅”的精神。只有你努力成长，才会方法得当，培养出的孩子自主能力就强，你的辛苦程度就会越来越低.1 从妖风
-                                河岸的郭家寺南行十二里，有一个叫孙蒋的小村庄，这小村庄之所以叫孙蒋村.获得标记喜欢♥最多的前5名豆友奖励 →个人肖像定制装饰画一幅←
-                                奖品由→你发我画股份有限公司←提供 （特别注意→被发现刷票作弊不符合活动规则一律无效）
-                                奖品详见本活动主图→吉祥物树树← 手上的画 ♡(ฅ•ω•ฅ)♡  </li>
-                        </ul>
-                    </div>
-                </div>
-            </a>
-
-        </div>
-        <div class="cont-classcontents J_tablist">
-            <a href="">
-                <div class="cont-classcontlist">
-                    <img src="images/block2.jpg" alt="" class="classcontlist-img">
-                    <!--mask-->
-                    <div class="list-intro J-mask">
-                        <h3 class="list-intro__title">冷火</h3>
-                        <ul>
-                            <li class="list-intro__info">作者：信哥哥</li>
-                            <li class="list-intro__info">英剧/BL/PG-18/BE/重要角色死亡</li>
-                            <li class="list-intro__cont">你是灿烂阳光的冬季某种程度上或许可以说，谷口治郎的《散步去》正是以漫画的形式为载体，
-                                传承着一种“禅”的精神。只有你努力成长，才会方法得当，培养出的孩子自主能力就强，你的辛苦程度就会越来越低.1 从妖风
-                                河岸的郭家寺南行十二里，有一个叫孙蒋的小村庄，这小村庄之所以叫孙蒋村.获得标记喜欢♥最多的前5名豆友奖励 →个人肖像定制装饰画一幅←
-                                奖品由→你发我画股份有限公司←提供 （特别注意→被发现刷票作弊不符合活动规则一律无效）
-                                奖品详见本活动主图→吉祥物树树← 手上的画 ♡(ฅ•ω•ฅ)♡  </li>
-                        </ul>
-                    </div>
-                </div>
-            </a>
-
-            <a href="">
-                <div class="cont-classcontlist">
-                    <img src="images/block5.jpg" alt="" class="classcontlist-img">
-                    <!--mask-->
-                    <div class="list-intro J-mask">
-                        <h3 class="list-intro__title">冷火</h3>
-                        <ul>
-                            <li class="list-intro__info">作者：信哥哥</li>
-                            <li class="list-intro__info">英剧/BL/PG-18/BE/重要角色死亡</li>
-                            <li class="list-intro__cont">你是灿烂阳光的冬季某种程度上或许可以说，谷口治郎的《散步去》正是以漫画的形式为载体，
-                                传承着一种“禅”的精神。只有你努力成长，才会方法得当，培养出的孩子自主能力就强，你的辛苦程度就会越来越低.1 从妖风
-                                河岸的郭家寺南行十二里，有一个叫孙蒋的小村庄，这小村庄之所以叫孙蒋村.获得标记喜欢♥最多的前5名豆友奖励 →个人肖像定制装饰画一幅←
-                                奖品由→你发我画股份有限公司←提供 （特别注意→被发现刷票作弊不符合活动规则一律无效）
-                                奖品详见本活动主图→吉祥物树树← 手上的画 ♡(ฅ•ω•ฅ)♡  </li>
-                        </ul>
-                    </div>
-                </div>
-            </a>
-            <a href="">
-                <div class="cont-classcontlist">
-                    <img src="images/block1.jpg" alt="" class="classcontlist-img">
-                    <!--mask-->
-                    <div class="list-intro J-mask">
-                        <h3 class="list-intro__title">冷火</h3>
-                        <ul>
-                            <li class="list-intro__info">作者：信哥哥</li>
-                            <li class="list-intro__info">英剧/BL/PG-18/BE/重要角色死亡</li>
-                            <li class="list-intro__cont">你是灿烂阳光的冬季某种程度上或许可以说，谷口治郎的《散步去》正是以漫画的形式为载体，
-                                传承着一种“禅”的精神。只有你努力成长，才会方法得当，培养出的孩子自主能力就强，你的辛苦程度就会越来越低.1 从妖风
-                                河岸的郭家寺南行十二里，有一个叫孙蒋的小村庄，这小村庄之所以叫孙蒋村.获得标记喜欢♥最多的前5名豆友奖励 →个人肖像定制装饰画一幅←
-                                奖品由→你发我画股份有限公司←提供 （特别注意→被发现刷票作弊不符合活动规则一律无效）
-                                奖品详见本活动主图→吉祥物树树← 手上的画 ♡(ฅ•ω•ฅ)♡  </li>
+                                奖品详见本活动主图→吉祥物树树← 手上的画 ♡(ฅ•ω•ฅ)♡
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -403,7 +441,8 @@
                                 传承着一种“禅”的精神。只有你努力成长，才会方法得当，培养出的孩子自主能力就强，你的辛苦程度就会越来越低.1 从妖风
                                 河岸的郭家寺南行十二里，有一个叫孙蒋的小村庄，这小村庄之所以叫孙蒋村.获得标记喜欢♥最多的前5名豆友奖励 →个人肖像定制装饰画一幅←
                                 奖品由→你发我画股份有限公司←提供 （特别注意→被发现刷票作弊不符合活动规则一律无效）
-                                奖品详见本活动主图→吉祥物树树← 手上的画 ♡(ฅ•ω•ฅ)♡  </li>
+                                奖品详见本活动主图→吉祥物树树← 手上的画 ♡(ฅ•ω•ฅ)♡
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -414,12 +453,12 @@
     <!--good words-->
     <div class="goodwords cont-block J_swiperblock">
 
-            <h3 class="cont-block__title">每日佳篇</h3>
-            <div class="cont-block__box">
-                <a class="J_arturl" href="" target="_blank"><h4 class="goodwords__title"></h4></a>
-                <p class="goodwords__par">
-                </p>
-            </div>
+        <h3 class="cont-block__title">每日佳篇</h3>
+        <div class="cont-block__box">
+            <a class="J_arturl" href="" target="_blank"><h4 class="goodwords__title"></h4></a>
+            <p class="goodwords__par">
+            </p>
+        </div>
 
         <ul class="dot-arrow">
             <li class="dot-left J_left">&lt;</li>
@@ -427,10 +466,127 @@
         </ul>
     </div>
     <!--active block-->
-
+    <div class="rectag cont-block">
+        <h3 class="cont-block__title">即将出本</h3>
+        <div class="rectag_block">
+            <a class="rectag_inner" href="">
+                <div class="cover-intro">
+                    <h5 class="rectag_title">王的男人</h5>
+                    <div class="cover-intro_info">
+                        <ul class="cover-info">
+                            <li class="cover_infolist">作者：wwweeefff</li>
+                            <li class="cover_infolist">类型:BL/魔幻</li>
+                        </ul>
+                        <div class="cover-time">
+                            2017.6.15
+                        </div>
+                    </div>
+                </div>
+                <div class="cover-img">
+                    <img src="images/f1.jpg" alt="" width="110">
+                </div>
+            </a>
+        </div>
+        <div class="rectag_block">
+            <a class="rectag_inner" href="">
+                <div class="cover-intro">
+                    <h5 class="rectag_title">王的男人</h5>
+                    <div class="cover-intro_info">
+                        <ul class="cover-info">
+                            <li class="cover_infolist">作者：wwweeefff</li>
+                            <li class="cover_infolist">类型:BL/魔幻</li>
+                        </ul>
+                        <div class="cover-time">
+                            2017.6.15
+                        </div>
+                    </div>
+                </div>
+                <div class="cover-img">
+                    <img src="images/f2.jpg" alt="" width="110">
+                </div>
+            </a>
+        </div>
+        <div class="rectag_block">
+            <a class="rectag_inner" href="">
+                <div class="cover-intro">
+                    <h5 class="rectag_title">王的男人</h5>
+                    <div class="cover-intro_info">
+                        <ul class="cover-info">
+                            <li class="cover_infolist">作者：wwweeefff</li>
+                            <li class="cover_infolist">类型:BL/魔幻</li>
+                        </ul>
+                        <div class="cover-time">
+                            2017.6.15
+                        </div>
+                    </div>
+                </div>
+                <div class="cover-img">
+                    <img src="images/f3.jpg" alt="" width="110">
+                </div>
+            </a>
+        </div>
+        <div class="rectag_block">
+            <a class="rectag_inner" href="">
+                <div class="cover-intro">
+                    <h5 class="rectag_title">王的男人</h5>
+                    <div class="cover-intro_info">
+                        <ul class="cover-info">
+                            <li class="cover_infolist">作者：wwweeefff</li>
+                            <li class="cover_infolist">类型:BL/魔幻</li>
+                        </ul>
+                        <div class="cover-time">
+                            2017.6.15
+                        </div>
+                    </div>
+                </div>
+                <div class="cover-img">
+                    <img src="images/f4.jpg" alt="" width="110">
+                </div>
+            </a>
+        </div>
+        <div class="rectag_block">
+            <a class="rectag_inner" href="">
+                <div class="cover-intro">
+                    <h5 class="rectag_title">王的男人</h5>
+                    <div class="cover-intro_info">
+                        <ul class="cover-info">
+                            <li class="cover_infolist">作者：wwweeefff</li>
+                            <li class="cover_infolist">类型:BL/魔幻</li>
+                        </ul>
+                        <div class="cover-time">
+                            2017.6.15
+                        </div>
+                    </div>
+                </div>
+                <div class="cover-img">
+                    <img src="images/f5.jpg" alt="" width="110">
+                </div>
+            </a>
+        </div>
+        <div class="rectag_block">
+            <a class="rectag_inner" href="">
+                <div class="cover-intro">
+                    <h5 class="rectag_title">王的男人</h5>
+                    <div class="cover-intro_info">
+                        <ul class="cover-info">
+                            <li class="cover_infolist">作者：wwweeefff</li>
+                            <li class="cover_infolist">类型:BL/魔幻</li>
+                        </ul>
+                        <div class="cover-time">
+                            2017.6.15
+                        </div>
+                    </div>
+                </div>
+                <div class="cover-img">
+                    <img src="images/f6.jpg" alt="" width="110">
+                </div>
+            </a>
+        </div>
+    </div>
 </div>
 
 <div class="footer"></div>
+
 <!--右边栏-->
 <div class="sticksidebar J_sidebar">
     <div class="side-list_box J_side_userbox">
@@ -482,9 +638,8 @@
 </div>
 <script src="JS/jquery-1.11.3.min.js"></script>
 <script src="JS/tween.min.js"></script>
+<script src="JS/cpsPlugins.js"></script>
 <script src="JS/base.js"></script>
-<script>
-
-</script>
+<script src="JS/index.js"></script>
 </body>
 </html>

@@ -1,7 +1,6 @@
 /**
  * Created by rebec on 2017/4/14.
  */
-
 var cps = cps || {};
 cps.public = {
     init: function () {
@@ -14,13 +13,17 @@ cps.public = {
         that.stickSideBar();
         that.scrollEvent();
         that.goTop();
-        that.swiperWords();
+        that.slideDownMenu('.J_navlogin', '.J_menuhover', '.J_downmenu');
+        that.suggestSearch();
+        // that.synchro('.J_textsearch')
     },
     stickSideBar: function () {
         var t = this;
-        var $sideBar = $('.J_sidebar');
-        var screenH = $('body').outerHeight();
-        $sideBar.height(screenH);
+        var $sideBar = $('.J_sidebar'),
+            $header = $('.J_header');
+        var screenH = $('body').outerHeight(),
+            headH = $header.outerHeight();
+        $sideBar.height(screenH - headH);
 
         if ($(window).width() < 1235) {
             $sideBar.animate({width: -35}, 'normal').hide();
@@ -71,14 +74,12 @@ cps.public = {
     goTop: function () {
         var $toTopBtn = $('.J-totop');
         $toTopBtn.on('click', function () {
-            // $('body').scrollTop(0);
-            // $('body').animate({scrollTop:'0px'},800,'easeInSine');
             $("html,body").animate({scrollTop: 0}, 300, 'easeInOutSine');
         })
     },
     scrollEvent: function () {
         var $fixHead = $('#J-attachedhead'),
-            $head = $('.header'),
+            $head = $('.J_header'),
             $toTopBtn = $('.J-totop');
         var $headH = $head.outerHeight();
         // var beforeTop = $(window).scrollTop();
@@ -93,22 +94,13 @@ cps.public = {
             } else if (winScTop >= 200) {
                 $toTopBtn.fadeIn(100);
             }
-            // t.goTop.call($this);//回到顶部控制
-            //head animation---tbc
-            // if(beforeTop<winScrT){
-            //     console.log('down');
-            //     // $headH.css('rotateX')
-            // }else{
-            //     console.log('up');
-            // }
-            // beforeTop = winScrT;
         });
         function fixhead() {
             var winScrT = $(this).scrollTop();
             if (winScrT > $headH) {
-                $fixHead.css('top', 0);
+                $head.addClass('J-attachedhead');
             } else {
-                $fixHead.css('top', -50);
+                $head.removeClass('J-attachedhead');
             }
         }
 
@@ -293,79 +285,135 @@ cps.public = {
         }
     },
     tabChange: function () {
-        var $tabTitle = $('.J_tabtitle'),
-            $tabList = $('.J_tablist');
-        $tabList.first().show();
-        // $tabTitle.eq(0).show().siblings('.J_tablist').hide();
-        $tabTitle.each(function () {
-            $tabTitle.on('click', function () {
-                var ind = $(this).index();
-                $(this).addClass('cur').siblings().removeClass('cur');
-                $tabList.eq(ind).show(200).siblings('.J_tablist').hide(200);
-            });
-
+        $('.J_cont-classpick').changeTab({
+            title: '.J_tabtitle',
+            body: '.J_tablist',
+            curCls: "cur",
+            duration: 200
         })
     },
-    swiperWords: function () {
-        var arrowL = $('.J_swiperblock').find('.J_left'),
-            arrowR = $('.J_swiperblock').find('.J_right');
-        var conTitle = $('.goodwords__title'),
-            conPar = $('.goodwords__par'),
-            conUrl = $('.J_arturl');
-        var url = './data/artdata.json?=' + new Date();
-        $.ajax({
-            type: 'get',
-            dataType: 'json',
-            cache: false,
-            url: url,
-            success: function (result) {
-                var dt = result[0].title,
-                    dd = result[0].cont,
-                    du = result[0].url;
-                conTitle.html(dt);
-                conPar.html(dd);
-                conUrl.get(0).href = du;
-                changeData(result);
-                // $.each(result,function () {
-                //
-                //     var dataTitle = this.title,
-                //         dataCont = this.cont;
-                //     conTitle.html(dataTitle);
-                //     conPar.html(dataCont);
-                // })
-
+    suggestSearch: function () {
+        var url = 'https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su';
+        var $ser = $('.J_textsearch'),
+            $suggestBox = $('.searchsuggest');
+        var pVal, historyData;
+        $(document).on('click', function (e) {
+            if (!$(e.target).hasClass('J_textsearch')) {
+                $ser.siblings($suggestBox).hide();
             }
         });
-        function changeData(data) {
-            var len = data.length;
-            var st = 0;
-            var dt, dd,du;
+        $ser.on('click', function () {
+            pVal = $.trim($ser.val());
+            var _this = this;
+            _this.contInd = -1;
+            $(this).siblings($suggestBox).show();
+            if (!pVal) {
+                $.ajax({
+                    url: './data/history.json',
+                    dataType: 'json',
+                    cache: false,
+                    type: 'get',
+                    success: function (re) {
+                        if (re) {
+                            bindData(re, 'title');
+                            historyData = re;
+                            hoverControl.call(_this);
+                        }
+                    }
+                })
+            }
+        }).on('input', function (e) {
+            var _this = this;
+            pVal = $.trim($ser.val());
+            if (pVal) {
+                $.ajax({
+                    url: url,
+                    type: 'get',
+                    dataType: 'jsonP',
+                    jsonp: 'cb',
+                    cache: false,
+                    data: {
+                        wd: pVal, // 查询关键词
+                        json: 1
+                    },
+                    success: function (re) {
+                        if (re.g) {
+                            bindData(re.g, 'q');
+                            hoverControl.call(_this);
+                        }
+                    }
+                })
+            } else if (!pVal) {
+                bindData(historyData, 'title');
+                _this.contInd = -1;
+                hoverControl.call(_this);
+            }
+        }).on('keydown', function (e) {
+            var _this = this;
+            keyControl.call(_this, e);
+        });
+        //绑定数据
+        function bindData(data, n) {
+            var $resultBox = $('.searchsuggest');
+            var htmlx = '';
+            $.each(data, function (i) {
+                if (i <= 5) {
+                    htmlx += '<li class="suggestlist">' + data[i][n] + '</li>'
+                }
+                $resultBox.html(htmlx);
+            })
+        }
 
-            arrowL.on('click', function () {
-                st--;
-                console.log(st);
-                if (st < 0) {
-                    st = data.length-1;
-                }
-                showData(data);
-            });
-            arrowR.on('click', function () {
-                st++;
-                if (st > len-1) {
-                    st = 0;
-                }
-                showData(data);
-            });
-            function showData(d) {
-                dt = d[st].title;
-                dd = d[st].cont;
-                du = d[st].url;
-                conTitle.html(dt);
-                conPar.html(dd);
-                conUrl.get(st).href = du;
+        //键盘控制上下以及enter搜索
+        function keyControl(e) {
+            if (e.keyCode === 40) {
+                this.contInd++;
+                listSelect.call(this);
+            } else if (e.keyCode === 38) {
+                this.contInd--;
+                listSelect.call(this);
+            } else if (e.keyCode === 13) {
+                var gourl = 'https://www.baidu.com/s?&rsv_spt=1&wd=' + $(this).val();
+                window.location.href = gourl;
             }
         }
+
+        //当前词条样式控制
+        function listSelect() {
+            var $suggestList = $(this).next().children('.suggestlist');
+            var txt;
+            if (this.contInd >= $suggestList.length - 1) {
+                this.contInd = -1;
+            } else if (this.contInd < -1) {
+                this.contInd = $suggestList.last().index() - 1;
+            }
+            $suggestList.eq(this.contInd).addClass('cur').siblings('.suggestlist').removeClass('cur');
+            txt = $suggestList.eq(this.contInd).text();
+            $(this).val(txt);
+        }
+
+        //鼠标滑过控制选中以及搜索当前词条
+        function hoverControl() {
+            var $suggestList = $(this).next().children();
+            var t = this;
+            $suggestList.on('mouseenter', function () {
+                $suggestList.eq($(this).index()).addClass('cur').siblings('.suggestlist').removeClass('cur');
+                t.contInd = $(this).index();
+                $(this).on('click', function (e) {
+                    var gourl = 'https://www.baidu.com/s?&rsv_spt=1&wd=' + $(this).html();
+                    window.location.href = gourl;
+                })
+            })
+        }
+    },
+    slideDownMenu: function (hbox, curEle, downEle) {
+        $(hbox).on('mouseenter', $(curEle), function () {
+            $(downEle).stop().slideDown();
+        }).on('mouseleave', function () {
+            $(downEle).stop().slideUp();
+        })
     }
+
 };
 $(function () {
     cps.public.init();

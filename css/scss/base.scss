@@ -152,6 +152,9 @@ a {
   background: $basicColor;
 }
 
+.lazy img{
+  background: url("../../images/imgloading.gif") no-repeat center;
+}
 .logo {
   float: left;
   background: url("../../images/logo-head@2x.png") no-repeat 0;

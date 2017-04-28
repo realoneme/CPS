@@ -145,7 +145,7 @@
 //common index
 .cont-block {
   width: 1200px;
-  margin: 0 auto;
+  margin: 20px auto;
 }
 
 .cont-block__title {
@@ -483,7 +483,7 @@
       height: 100%;
       display: block;
     }
-    .blocklist-title {
+    .blocklist-bookinfo {
       position: absolute;
       font-size: 12px;
       color: $backColor;
@@ -492,15 +492,19 @@
       z-index: 5;
       width: 210px;
       height: 40px;
-      line-height: 40px;
+
       padding-left: 10px;
       background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.4) 70%);
       background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.31) 70%);
       background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.31) 70%);
       background: -ms-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.31) 70%);
       background: linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.31) 70%);
+      span{
+        display: block;
+        line-height: 20px;
+      }
     }
-    .blocklist-mark {
+    .blocklist-bookmark {
       position: absolute;
       font-size: 18px;
       color: #ffb842;

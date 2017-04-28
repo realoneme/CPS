@@ -118,7 +118,7 @@
 
 .cont-block {
   width: 1200px;
-  margin: 0 auto; }
+  margin: 20px auto; }
 
 .cont-block__title {
   font-size: 34px;
@@ -383,7 +383,7 @@
       width: 100%;
       height: 100%;
       display: block; }
-    .blocklist .blocklist-inner .blocklist-title {
+    .blocklist .blocklist-inner .blocklist-bookinfo {
       position: absolute;
       font-size: 12px;
       color: #ffffff;
@@ -392,14 +392,16 @@
       z-index: 5;
       width: 210px;
       height: 40px;
-      line-height: 40px;
       padding-left: 10px;
       background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.4) 70%);
       background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.31) 70%);
       background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.31) 70%);
       background: -ms-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.31) 70%);
       background: linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.31) 70%); }
-    .blocklist .blocklist-inner .blocklist-mark {
+      .blocklist .blocklist-inner .blocklist-bookinfo span {
+        display: block;
+        line-height: 20px; }
+    .blocklist .blocklist-inner .blocklist-bookmark {
       position: absolute;
       font-size: 18px;
       color: #ffb842;
@@ -516,6 +518,9 @@ a {
   min-width: 1200px;
   min-height: 90px;
   background: #232f3f; }
+
+.lazy img {
+  background: url("../../images/imgloading.gif") no-repeat center; }
 
 .logo {
   float: left;

@@ -292,6 +292,120 @@
   top: 48px;
   transition: left 0.75s cubic-bezier(0, 0.82, 0.78, 1.34); }
 
+.oldactive_wrapper {
+  width: 1180px;
+  height: 100px;
+  overflow: hidden;
+  margin: 0 auto;
+  white-space: nowrap;
+  font-size: 0; }
+
+.activeitem {
+  width: 20%;
+  display: inline-block;
+  transition: width 0.4s cubic-bezier(0, 0.51, 0.59, 0.95); }
+
+.title_img {
+  height: 100px; }
+
+.hidden_img {
+  height: 79px; }
+
+.lecturewrapper {
+  font-size: 0; }
+
+.lecturebox {
+  display: inline-block;
+  margin-right: 3px;
+  width: 397px; }
+  .lecturebox .lecturebox-left {
+    width: 196px;
+    height: 194px;
+    float: left;
+    position: relative;
+    margin-right: 3px; }
+  .lecturebox .lecturebox-left:before {
+    background: #ffffff;
+    width: 0;
+    height: 100%;
+    left: 50%;
+    opacity: 0;
+    position: absolute;
+    transition: .5s;
+    content: ""; }
+  .lecturebox .lecturebox-left:hover:before {
+    left: 0;
+    width: 100%;
+    opacity: .2;
+    z-index: 1; }
+  .lecturebox .lecturebox-right {
+    width: 194px;
+    height: 194px;
+    background: #ddd;
+    float: left;
+    position: relative;
+    text-align: center; }
+    .lecturebox .lecturebox-right .lecturebox-right_title {
+      font-size: 25px;
+      font-weight: lighter;
+      line-height: 100px; }
+    .lecturebox .lecturebox-right .lecturebox-right_intro {
+      font-size: 12px;
+      color: #afaba1; }
+  .lecturebox .bgarrow {
+    border: 11px solid transparent;
+    border-right-color: #ffffff;
+    position: absolute;
+    right: 0px;
+    top: 96px;
+    z-index: 2; }
+  .lecturebox .upperarrow {
+    border: 8px solid transparent;
+    border-right-color: #DDD;
+    position: absolute;
+    right: -3px;
+    top: 98px;
+    z-index: 3; }
+
+.blocklist {
+  font-size: 0; }
+  .blocklist .blocklist-inner {
+    display: inline-block;
+    width: 220px;
+    height: 220px;
+    margin: 5px;
+    padding: 5px; }
+    .blocklist .blocklist-inner img {
+      width: 100%;
+      height: 100%; }
+    .blocklist .blocklist-inner .blocklist-innerlink {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: block; }
+    .blocklist .blocklist-inner .blocklist-title {
+      position: absolute;
+      font-size: 12px;
+      color: #ffffff;
+      bottom: 0;
+      left: 0;
+      z-index: 5;
+      width: 210px;
+      height: 40px;
+      line-height: 40px;
+      padding-left: 10px;
+      background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.4) 70%);
+      background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.31) 70%);
+      background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.31) 70%);
+      background: -ms-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.31) 70%);
+      background: linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.31) 70%); }
+    .blocklist .blocklist-inner .blocklist-mark {
+      position: absolute;
+      font-size: 18px;
+      color: #ffb842;
+      right: 10px;
+      bottom: 10px; }
+
 @media only screen and (-webkit-min-device-pixel-ratio: 1.25), only screen and (min-resolution: 120dpi), only screen and (min-resolution: 1.25dppx) {
   .logo {
     float: left;

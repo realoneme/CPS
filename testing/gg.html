@@ -25,7 +25,8 @@
             l = canvas.offsetLeft;
             t = canvas.offsetTop,
             img = new Image();
- 
+            canvas.height = document.documentElement.clientWidth;
+            // canvas.width = document.documentElement.clientHeight;
         var randomImg = function(){
             var random = Math.random();
             if(random < 0.4){

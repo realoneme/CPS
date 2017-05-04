@@ -219,9 +219,12 @@ body {
 .sec-cont-swiper {
   width: 100%;
   overflow: hidden; }
-  .sec-cont-swiper .swiper-slide img {
+  .sec-cont-swiper .swiper-slide {
+    width: 4.5rem;
+    margin-left: 0.6rem; }
+  .sec-cont-swiper img {
     width: 100%; }
-  .sec-cont-swiper .swiper-slide .bookinfo_bottom {
+  .sec-cont-swiper .bookinfo_bottom {
     width: 100%;
     font-size: 0.4rem; }
 

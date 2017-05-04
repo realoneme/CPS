@@ -1,201 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
 
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-		<title>mobileindex</title>
-		<link rel="stylesheet" href="mreset.css">
-		<link rel="stylesheet" href="swiper-3.4.2.min.css">
-		<link rel="stylesheet" href="css/scss/base.css" />
-		<script>
-			var desW = 414 * 3;
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>mobileindex</title>
+    <link rel="stylesheet" href="mreset.css">
+    <link rel="stylesheet" href="swiper-3.4.2.min.css">
+    <link rel="stylesheet" href="css/scss/base.css"/>
+    <script>
+        var desW = 414 * 3;
 
-			function refreshRem() {
-				var winW = document.documentElement.clientWidth;
-				var dpi = desW / winW;
-				var fSize = 100 / dpi;
-				document.documentElement.style.fontSize = fSize + 'px';
-				window.fSize = fSize;
-				window.w = winW;
-			}
-			refreshRem();
-			window.addEventListener('resize', refreshRem);
-		</script>
+        function refreshRem() {
+            var winW = document.documentElement.clientWidth;
+            var dpi = desW / winW;
+            var fSize = 100 / dpi;
+            document.documentElement.style.fontSize = fSize + 'px';
+            window.fSize = fSize;
+            window.w = winW;
+        }
+        refreshRem();
+        window.addEventListener('resize', refreshRem);
+    </script>
 
-	</head>
+</head>
 
-	<body>
-		<header class="head">
-			<div class="mlogo"></div>
-			<div class="headsearch">
-				<form class="searchbox" id="headsearch">
-					<input type="text" name="searchtext" class="searchinput" placeholder="搜搜你的心头好">
-					<a href="javascript:;" class="searchbtn">&#xe603;</a>
-				</form>
-			</div>
-			<div class="userinfo">
-				&#xe61a;
-			</div>
-		</header>
-		<main>
-			<section class="banner-swiper">
-				<div class="swiper-container">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide"><img data-src="b1.jpg" class="swiper-lazy" alt="" />
-							<div class="swiper-lazy-preloader"></div>
-						</div>
-						<div class="swiper-slide"><img data-src="b2.jpg" class="swiper-lazy" />
-							<div class="swiper-lazy-preloader"></div>
-						</div>
-						<div class="swiper-slide"><img data-src="b3.jpg" class="swiper-lazy" />
-							<div class="swiper-lazy-preloader"></div>
-						</div>
-					</div>
-					<div class="swiper-pagination banner-swiper_page"></div>
+<body>
+<header class="head">
+    <div class="mlogo"></div>
+    <div class="headsearch">
+        <form class="searchbox" id="headsearch">
+            <input type="text" name="searchtext" class="searchinput" placeholder="搜搜你的心头好">
+            <a href="javascript:;" class="searchbtn">&#xe603;</a>
+        </form>
+    </div>
+    <div class="userinfo">
+        &#xe61a;
+    </div>
+</header>
+<main>
+    <section class="banner-swiper">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img data-src="b1.jpg" class="swiper-lazy" alt=""/>
+                    <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide"><img data-src="b2.jpg" class="swiper-lazy"/>
+                    <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide"><img data-src="b3.jpg" class="swiper-lazy"/>
+                    <div class="swiper-lazy-preloader"></div>
+                </div>
+            </div>
+            <div class="swiper-pagination banner-swiper_page"></div>
 
-				</div>
-			</section>
-			<nav class="nav-block">
-				<a href="#" class="nav-block-list">
-					<div class="nav-list">&#xe69b;</div>
-					<div class="nav-list_name">开坑写文</div>
-				</a>
-				<a href="#" class="nav-block-list">
-					<div class="nav-list">&#xe621;</div>
-					<div class="nav-list_name">西皮求文</div>
-				</a>
-				<a href="#" class="nav-block-list">
-					<div class="nav-list">&#xe6ba;</div>
-					<div class="nav-list_name">热门西皮</div>
-				</a>
-				<a href="#" class="nav-block-list">
-					<div class="nav-list">&#xe60a;</div>
-					<div class="nav-list_name">兑换粮草</div>
-				</a>
-			</nav>
-			<section>
-				<div class="sectiontitle">
-					<h3 class="sec-title">本周推荐 <span class="fonticons">&#xe600;</span></h3>
-				</div>
+        </div>
+    </section>
+    <nav class="nav-block">
+        <a href="#" class="nav-block-list">
+            <div class="nav-list">&#xe69b;</div>
+            <div class="nav-list_name">开坑写文</div>
+        </a>
+        <a href="#" class="nav-block-list">
+            <div class="nav-list">&#xe621;</div>
+            <div class="nav-list_name">西皮求文</div>
+        </a>
+        <a href="#" class="nav-block-list">
+            <div class="nav-list">&#xe6ba;</div>
+            <div class="nav-list_name">热门西皮</div>
+        </a>
+        <a href="#" class="nav-block-list">
+            <div class="nav-list">&#xe60a;</div>
+            <div class="nav-list_name">兑换粮草</div>
+        </a>
+    </nav>
+    <section>
+        <div class="sectiontitle">
+            <h3 class="sec-title">本周推荐 <span class="fonticons">&#xe600;</span></h3>
+        </div>
 
-				<div class="sec-cont sec-recommend-cont">
-					<div class="sec-cont-inner">
-						<div class="recommendpic">
-							<img src="r17.jpg" />
-						</div>
-						<div class="recommendinfo">
-							<ul>
-								<li class="booktitle">The Forbidden Kiss</li>
-								<li class="bookinfo">作者：CAAAA</li>
-								<li class="bookinfo">英剧/BL/高梅/PG/架空</li>
-							</ul>
-						</div>
-					</div>
+        <div class="sec-cont sec-recommend-cont">
+            <div class="sec-cont-inner">
+                <div class="recommendpic">
+                    <img src="r17.jpg"/>
+                </div>
+                <div class="recommendinfo">
+                    <ul>
+                        <li class="booktitle">The Forbidden Kiss</li>
+                        <li class="bookinfo">作者：CAAAA</li>
+                        <li class="bookinfo">英剧/BL/高梅/PG/架空</li>
+                    </ul>
+                </div>
+            </div>
 
-				</div>
-			</section>
-			<section>
-				<div class="sectiontitle">
-					<h3 class="sec-title">太太公开新作 <span class="fonticons">&#xe60f;</span></h3>
-					<a class="seemore" href="">查看全部<span class="fonticons">&#xe612;</span></a>
-				</div>
+        </div>
+    </section>
+    <section>
+        <div class="sectiontitle">
+            <h3 class="sec-title">太太公开新作 <span class="fonticons">&#xe60f;</span></h3>
+            <a class="seemore" href="">查看全部<span class="fonticons">&#xe612;</span></a>
+        </div>
 
-				<div class="sec-cont">
-					<div class="sec-cont-inner sec-cont-swiper">
-						<div class="swiper-container">
-							<div class="swiper-wrapper">
-								<div class="swiper-slide">
-									<div class="booklet">
-										<img src="block10.jpg" />
-										<span class="bookinfo_bottom">冷火</span>
-									</div>
-									
-									<!--<div class="swiper-lazy-preloader"></div>-->
-								</div>
-								<div class="swiper-slide">
-									<img src="block19.jpg" />
-									<!--<div class="swiper-lazy-preloader"></div>-->
-								</div>
-								<div class="swiper-slide">
-									<img src="block3.jpg" />
-									<!--<div class="swiper-lazy-preloader"></div>-->
-								</div>
-								<div class="swiper-slide">
-									<img src="block5.jpg" />
-									<!--<div class="swiper-lazy-preloader"></div>-->
-								</div>
-								<div class="swiper-slide">
-									<img src="block4.jpg" />
-									<!--<div class="swiper-lazy-preloader"></div>-->
-								</div>
-								<div class="swiper-slide">
-									<img src="block6.jpg" />
-									<!--<div class="swiper-lazy-preloader"></div>-->
-								</div>
-								<div class="swiper-slide">
-									<img src="block7.jpg" />
-									<!--<div class="swiper-lazy-preloader"></div>-->
-								</div>
-							</div>
-						</div>
-					</div>
+        <div class="sec-cont">
+            <div class="sec-cont-inner sec-cont-swiper J-manSwiper_wrapper">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="block3.jpg"/>
+                            <span class="bookinfo_bottom">冷火</span>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="block4.jpg"/>
+                            <span class="bookinfo_bottom">冷火</span>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="block5.jpg"/>
+                            <span class="bookinfo_bottom">冷火</span>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="block6.jpg"/>
+                            <span class="bookinfo_bottom">冷火</span>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="block7.jpg"/>
+                            <span class="bookinfo_bottom">冷火</span>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="block10.jpg"/>
+                            <span class="bookinfo_bottom">冷火</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-				</div>
-			</section>
-		</main>
-		<div class="totop">&#xe64b;</div>
+        </div>
+    </section>
+</main>
+<div class="totop">&#xe64b;</div>
 
-		<script src="zepto.min.js"></script>
-		<script src="swiper.js"></script>
-		<script>
-			$(function() {
-				//bannerSwiper
-				new Swiper('.banner-swiper .swiper-container', {
-					direction: 'horizontal',
-					loop: true,
-					autoplay: 2500,
-					autoplayDisableOnInteraction: false,
-					lazyLoading: true,
-					pagination: '.swiper-pagination'
-				});
+<script src="zepto.min.js"></script>
+<script src="touch.min.js"></script>
+<script src="swiper-3.4.2.jquery.min.js"></script>
+<script>
+    $(function () {
+        //bannerSwiper
+        new Swiper('.banner-swiper .swiper-container', {
+            direction: 'horizontal',
+            loop: true,
+            autoplay: 2500,
+            autoplayDisableOnInteraction: false,
+            lazyLoading: true,
+            pagination: '.swiper-pagination'
+        });
 
-				new Swiper('.sec-cont-swiper .swiper-container', {
-					direction: 'horizontal',					
-					spaceBetween : 18,
-                    slidesPerView : 1.7,
-                    slidesPerGroup : 3,
-					iOSEdgeSwipeDetection: true,
-				});
+        new Swiper('.J-manSwiper_wrapper .swiper-container', {
+            slidesPerView: 'auto',
+            freeMode: true,
+            resistance: false,
+            freeModeMomentumRatio: 5
+        });
 
-				function scrollEvent() {
-					$(window).on('scroll', function() {
-						var $st = $(this).scrollTop();
-						var $header = $('.head');
-						if($st > 1) {
-							$header.addClass('fixhead');
-						} else {
-							$header.removeClass('fixhead');
-						}
 
-						if($st > 3 * window.fSize) {
-							$('.totop').css('opacity', 1);
-						} else {
-							$('.totop').css('opacity', 0);
-						}
+        function scrollEvent() {
+            $(window).on('scroll', function () {
+                var $st = $(this).scrollTop();
+                var $header = $('.head');
+                if ($st > 1) {
+                    $header.addClass('fixhead');
+                } else {
+                    $header.removeClass('fixhead');
+                }
 
-					})
-				}
+                if ($st > 3 * window.fSize) {
+                    $('.totop').css('opacity', 1);
+                } else {
+                    $('.totop').css('opacity', 0);
+                }
 
-				if($('.totop').length) {
-					$('.totop').click(function() {
-						$('body').scrollTop(0);
-					})
-				}
-				scrollEvent();
+            })
+        }
 
-			})
-		</script>
-	</body>
+
+        if ($('.totop').length) {
+            $('.totop').click(function () {
+                $('body').scrollTop(0);
+            })
+        }
+        scrollEvent();
+    })
+</script>
+</body>
 
 </html>

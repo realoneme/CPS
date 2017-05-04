@@ -204,7 +204,7 @@
                 hourTime:'.acshi',
                 minTime:'.acfen',
                 sTime:'.acmiao',
-                word:'活动已经结束了哦'
+                word:'.countblock'
             });
             function countDown(o) {
                 function getTime() {
@@ -238,7 +238,7 @@
                     if (m <= 0 && s <= 0) {
                         clearInterval(o.timer);
                         if (sNotice) {
-                            $(sNotice).html(o.word);
+                            $(sNotice).html('活动已经结束了哦');
                             return
                         }
                     }

@@ -240,7 +240,8 @@ body {
 
 .acimg {
   width: 100%;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
   .acimg img {
     width: 100%; }
   .acimg .countblock {

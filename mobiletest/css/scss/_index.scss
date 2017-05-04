@@ -1,127 +1,228 @@
 .banner-swiper {
-    width: 12.42rem;
+  width: 12.42rem;
 }
 
 .banner-swiper img {
-    width: 100%;
+  width: 100%;
 }
 
 .banner-swiper .banner-swiper_page {
-    text-align: right;
-    bottom: 0;
+  text-align: right;
+  bottom: 0;
 }
 
 .banner-swiper .banner-swiper_page .swiper-pagination-bullet {
-    border: 1px solid #CCCCCC;
-    background: rgba(255, 255, 255, .7);
-    opacity: 1;
+  border: 1px solid #CCCCCC;
+  background: rgba(255, 255, 255, .7);
+  opacity: 1;
 }
 
 .banner-swiper .banner-swiper_page .swiper-pagination-bullet-active {
-    background: #a98e67;
+  background: #a98e67;
 }
-
 
 /*nav*/
 
 .nav-block {
-    text-align: center;
+  text-align: center;
+  display: flex;
+  display: -webkit-box;
+  flex-direction: row;
+  align-content: space-between;
+  margin-top: 0.65rem;
+}
+
+.nav-list {
+  font-family: 'iconfont';
+  color: #a98e67;
+  font-size: 1.2rem;
+  font-weight: 100;
+}
+
+.nav-block-list {
+  display: block;
+  width: 3.1rem;
+}
+
+.nav-list_name {
+  font-size: .4rem;
+  color: #a98e67;
+}
+
+//section title
+.sectiontitle {
+  margin: 0.71rem 0 0.37rem 0;
+}
+
+.sec-title {
+  text-align: center;
+  font-size: 0.6rem;
+  color: $baseBlue;
+  letter-spacing: 0.08rem;
+}
+
+.recommendpic {
+  width: 3.03rem;
+  height: 3.03rem;
+  margin: 0 1.75rem 0 1.4rem;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.sec-cont {
+  width: 12.4rem;
+  padding: 0 0.4rem 0 0.4rem;
+  .sec-cont-inner {
     display: flex;
     display: -webkit-box;
     flex-direction: row;
     align-content: space-between;
-    margin-top: 0.65rem;
-}
-
-.nav-list {
-    font-family: 'iconfont';
-    color: #a98e67;
-    font-size: 1.2rem;
-    font-weight: 100;
-}
-
-.nav-block-list {
-    display: block;
-    width: 3.1rem;
-}
-
-.nav-list_name {
-    font-size: .4rem;
-    color: #a98e67;
-}
-
-//section title
-.sectiontitle{
-    margin: 0.71rem 0 0.37rem 0;
-}
-.sec-title{
-    text-align: center;
-    font-size: 0.6rem;
-    color:$baseBlue;
-    letter-spacing: 0.08rem;
-}
-
-.recommendpic{
-    width: 3.03rem;
-    height: 3.03rem;
-    margin: 0 1.75rem 0 1.4rem;
-    img{
-        width: 100%;
-        height: 100%;
-    }
-}
-.sec-cont{
-    width: 12.4rem;
-     padding: 0 0.4rem 0 0.4rem;
-      .sec-cont-inner{
-       display: flex;
-  display: -webkit-box;
-  flex-direction: row;  
-  align-content: space-between;
-  border-top: $singlepx solid #ddd;
-  padding-top:0.37rem;
+    border-top: $singlepx solid #ddd;
+    padding-top: 0.37rem;
   }
 }
 
-.recommendinfo{
-    padding-top: 0.2rem;
-    ul{
-        li{
-            line-height: 0.9rem;
-        }
+.recommendinfo {
+  padding-top: 0.2rem;
+  ul {
+    li {
+      line-height: 0.9rem;
     }
-    .booktitle{
+  }
+  .booktitle {
     font-size: 0.5rem;
-    color:$baseBlue;
-}
-.bookinfo{
+    color: $baseBlue;
+  }
+  .bookinfo {
     font-size: 0.4rem;
-    color:$info;
-}
+    color: $info;
+  }
 
 }
-.seemore{
-    font-size: .4rem;
-    color:$baseGold;
-    text-align: center;
-    display: block;
+
+.seemore {
+  font-size: .4rem;
+  color: $baseGold;
+  text-align: center;
+  display: block;
 }
 
 //new book
-.sec-cont-swiper{
-    width: 100%;
-    overflow: hidden;
-        .swiper-slide{
-            width: 4.5rem;
-            margin-left: 0.6rem;
+.sec-cont-swiper {
+  width: 100%;
+  overflow: hidden;
+  .bookletwrapper {
+    margin-left: -.2rem;
+  }
+  .booklet {
+    float: left;
+    width: 33.33%;
+    padding-left: .2rem;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
 
-        }
-        img{
-            width: 100%;
-        }
-        .bookinfo_bottom{
-            width: 100%;
-            font-size: 0.4rem;
-        }
+  img {
+    width: 100%;
+  }
+  .bookinfo_bottom {
+    width: 100%;
+    font-size: 0.4rem;
+    text-align: center;
+    display: block;
+    line-height: 1rem;
+    height: 1rem;
+  }
 
 }
+
+//active
+.acimg {
+  width: 100%;
+  position: relative;
+  img {
+    width: 100%;
+  }
+  .countblock {
+    color: #FFF;
+    background: rgba(0, 0, 0, .5);
+    padding: 0 .3rem;
+    position: absolute;
+    height: 1rem;
+    font-size: .6rem;
+    line-height: 1rem;
+    left: 0.5rem;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+
+  //animation
+  .catmove {
+    width: 100%;
+    position: absolute;
+    top: -2.15rem;
+    left: -2rem;
+    animation: catwalk 10s ease infinite alternate;
+    -webkit-animation: catwalk 10s ease infinite alternate;
+
+  }
+
+  .catjump {
+    background: url("../../miao.png") no-repeat;
+    width: 1.19rem;
+    height: 2.15rem;
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    @include bz(1.19rem, 17.18rem);
+    animation: catjump 1s steps(8) infinite;
+    -webkit-animation: catjump 1s steps(8) infinite;
+  }
+
+  .reversecat {
+    transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
+  }
+}
+
+@keyframes catjump {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0rem -17.18rem;
+  }
+}
+
+;
+@-webkit-keyframes catjump {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0rem -17.18rem;
+  }
+}
+
+;
+
+@keyframes catwalk {
+  0% {
+    left: -2rem;
+  }
+  100% {
+    left: 12.42rem;
+  }
+}
+
+@keyframes catwalk {
+  from {
+    left: -2rem;
+  }
+  to {
+    left: 12.42rem;
+  }
+}
+

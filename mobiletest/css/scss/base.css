@@ -1,8 +1,8 @@
 @font-face {
   font-family: 'iconfont';
   /* project id 290873 */
-  src: url("//at.alicdn.com/t/font_ieoq540z3ii442t9.eot");
-  src: url("//at.alicdn.com/t/font_ieoq540z3ii442t9.eot?#iefix") format("embedded-opentype"), url("//at.alicdn.com/t/font_ieoq540z3ii442t9.woff") format("woff"), url("//at.alicdn.com/t/font_ieoq540z3ii442t9.ttf") format("truetype"), url("//at.alicdn.com/t/font_ieoq540z3ii442t9.svg#iconfont") format("svg"); }
+  src: url("//at.alicdn.com/t/font_hy5lu38h3gd86w29.eot");
+  src: url("//at.alicdn.com/t/font_hy5lu38h3gd86w29.eot?#iefix") format("embedded-opentype"), url("//at.alicdn.com/t/font_hy5lu38h3gd86w29.woff") format("woff"), url("//at.alicdn.com/t/font_hy5lu38h3gd86w29.ttf") format("truetype"), url("//at.alicdn.com/t/font_hy5lu38h3gd86w29.svg#iconfont") format("svg"); }
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
@@ -113,18 +113,18 @@ body {
 
 .totop {
   font-family: 'iconfont';
-  color: #8a8a8a;
+  color: #ffffff;
   position: fixed;
   right: 0.34rem;
-  bottom: 1.34rem;
+  bottom: 0.34rem;
   width: 1.12rem;
   height: 1.12rem;
-  background: #FFF;
-  border: 1px solid #232f3f;
+  background: rgba(0, 0, 0, 0.41);
   border-radius: 50%;
   opacity: 0;
   transition: .3s;
-  text-align: center; }
+  text-align: center;
+  z-index: 10; }
 
 .fonticons {
   font-family: 'iconfont';
@@ -219,13 +219,81 @@ body {
 .sec-cont-swiper {
   width: 100%;
   overflow: hidden; }
-  .sec-cont-swiper .swiper-slide {
-    width: 4.5rem;
-    margin-left: 0.6rem; }
+  .sec-cont-swiper .bookletwrapper {
+    margin-left: -.2rem; }
+  .sec-cont-swiper .booklet {
+    float: left;
+    width: 33.33%;
+    padding-left: .2rem;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
   .sec-cont-swiper img {
     width: 100%; }
   .sec-cont-swiper .bookinfo_bottom {
     width: 100%;
-    font-size: 0.4rem; }
+    font-size: 0.4rem;
+    text-align: center;
+    display: block;
+    line-height: 1rem;
+    height: 1rem; }
+
+.acimg {
+  width: 100%;
+  position: relative; }
+  .acimg img {
+    width: 100%; }
+  .acimg .countblock {
+    color: #FFF;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 0 .3rem;
+    position: absolute;
+    height: 1rem;
+    font-size: .6rem;
+    line-height: 1rem;
+    left: 0.5rem;
+    top: 0;
+    bottom: 0;
+    margin: auto; }
+  .acimg .catmove {
+    width: 100%;
+    position: absolute;
+    top: -2.15rem;
+    left: -2rem;
+    animation: catwalk 10s ease infinite alternate;
+    -webkit-animation: catwalk 10s ease infinite alternate; }
+  .acimg .catjump {
+    background: url("../../miao.png") no-repeat;
+    width: 1.19rem;
+    height: 2.15rem;
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    background-size: 1.19rem 17.18rem;
+    -webkit-background-size: 1.19rem 17.18rem;
+    animation: catjump 1s steps(8) infinite;
+    -webkit-animation: catjump 1s steps(8) infinite; }
+  .acimg .reversecat {
+    transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg); }
+
+@keyframes catjump {
+  from {
+    background-position: 0 0; }
+  to {
+    background-position: 0rem -17.18rem; } }
+@-webkit-keyframes catjump {
+  from {
+    background-position: 0 0; }
+  to {
+    background-position: 0rem -17.18rem; } }
+@keyframes catwalk {
+  0% {
+    left: -2rem; }
+  100% {
+    left: 12.42rem; } }
+@keyframes catwalk {
+  from {
+    left: -2rem; }
+  to {
+    left: 12.42rem; } }
 
 /*# sourceMappingURL=base.css.map */

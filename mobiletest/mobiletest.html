@@ -103,37 +103,44 @@
         </div>
 
         <div class="sec-cont">
-            <div class="sec-cont-inner sec-cont-swiper J-manSwiper_wrapper">
-                <div class="swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img src="block3.jpg"/>
-                            <span class="bookinfo_bottom">冷火</span>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="block4.jpg"/>
-                            <span class="bookinfo_bottom">冷火</span>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="block5.jpg"/>
-                            <span class="bookinfo_bottom">冷火</span>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="block6.jpg"/>
-                            <span class="bookinfo_bottom">冷火</span>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="block7.jpg"/>
-                            <span class="bookinfo_bottom">冷火</span>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="block10.jpg"/>
-                            <span class="bookinfo_bottom">冷火</span>
-                        </div>
+            <div class="sec-cont-inner sec-cont-swiper">
+                <div class="bookletwrapper">
+                    <div class="booklet">
+                        <img src="block3.jpg" alt="">
+                        <span class="bookinfo_bottom">冷火</span>
+                    </div>
+                    <div class="booklet">
+                        <img src="block4.jpg" alt="">
+                        <span class="bookinfo_bottom">冷火</span>
+                    </div>
+                    <div class="booklet">
+                        <img src="block5.jpg" alt="">
+                        <span class="bookinfo_bottom">冷火</span>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+    <section>
+        <div class="sectiontitle">
+            <h3 class="sec-title">本月征文活动 <span class="fonticons">&#xe628;</span></h3>
+        </div>
 
+        <div class="sec-cont">
+            <div class="acimg">
+                <img src="ac.jpg" alt="">
+                    <div class="countblock">
+                        <span>还有</span>
+                        <span class="acri"></span><span>天</span>
+                        <span class="acshi"></span><span>时</span>
+                        <span class="acfen"></span><span>分</span>
+                        <span class="acmiao"></span><span>秒</span>
+                    </div>
+                <div class="catmove">
+                    <div class="catjump" id="J-catmove"></div>
+                </div>
+
+            </div>
         </div>
     </section>
 </main>
@@ -143,7 +150,10 @@
 <script src="touch.min.js"></script>
 <script src="swiper-3.4.2.jquery.min.js"></script>
 <script>
+
     $(function () {
+        //public
+
         //bannerSwiper
         new Swiper('.banner-swiper .swiper-container', {
             direction: 'horizontal',
@@ -154,11 +164,17 @@
             pagination: '.swiper-pagination'
         });
 
-        new Swiper('.J-manSwiper_wrapper .swiper-container', {
-            slidesPerView: 'auto',
-            freeMode: true,
-            resistance: false,
-            freeModeMomentumRatio: 5
+       var s2 = new Swiper('.J-manSwiper_wrapper', {
+           effect : 'coverflow',
+           slidesPerView: 3,
+           centeredSlides: true,
+           coverflow: {
+               rotate: 30,
+               stretch: 10,
+               depth: 60,
+               modifier: 2,
+               slideShadows : true
+           }
         });
 
 
@@ -181,6 +197,76 @@
             })
         }
 
+        function acCount() {
+            countDown({
+                time:'2017-5-6 18:35:41',
+                dayTime:'.acri',
+                hourTime:'.acshi',
+                minTime:'.acfen',
+                sTime:'.acmiao',
+                word:'活动已经结束了哦'
+            });
+            function countDown(o) {
+                function getTime() {
+                    var endTime = new Date(o.time);
+                    var nowTime = new Date();
+                    var t = endTime.getTime() - nowTime.getTime();
+                    var d = Math.floor(t / (1000 * 60 * 60 * 24));
+                    var h = Math.floor(t % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
+                    var m = Math.floor(t % (1000 * 60 * 60) / (1000 * 60));
+                    var s = Math.floor(t % (1000 * 60) / 1000);
+                    var dTime = o.dayTime, hTime = o.hourTime, mTime = o.minTime, sTime = o.sTime, sNotice = o.word;
+                    $(dTime).html(d);
+                    $(hTime).html(h);
+                    $(mTime).html(m);
+                    $(sTime).html(s);
+                    if (d <= 0) {
+                        $(dTime).html("0" + d)
+                    } else {
+                        if (h <= 9 && h >= 0) {
+                            $(hTime).html("0" + h)
+                        } else {
+                            if (m <= 9 && m >= 0) {
+                                $(mTime).html("0" + m)
+                            } else {
+                                if (s <= 9 && s >= 0) {
+                                    $(sTime).html("0" + s)
+                                }
+                            }
+                        }
+                    }
+                    if (m <= 0 && s <= 0) {
+                        clearInterval(o.timer);
+                        if (sNotice) {
+                            $(sNotice).html(o.word);
+                            return
+                        }
+                    }
+                    if (t <= 0) {
+                        $(dTime).html(0);
+                        $(hTime).html(0);
+                        $(mTime).html(0);
+                        $(sTime).html(0);
+                        clearInterval(o.timer)
+                    }
+                }
+
+               o.timer = setInterval(getTime, 1000)
+            }
+
+        }
+
+        function catMove() {
+            var catAni = $('#J-catmove');
+            window.setInterval(function () {
+                if(catAni.hasClass('reversecat')){
+                    catAni.removeClass('reversecat');
+                }else{
+                    catAni.addClass('reversecat');
+                }
+
+            },10000)
+        }
 
         if ($('.totop').length) {
             $('.totop').click(function () {
@@ -188,6 +274,8 @@
             })
         }
         scrollEvent();
+        acCount();
+        catMove();
     })
 </script>
 </body>

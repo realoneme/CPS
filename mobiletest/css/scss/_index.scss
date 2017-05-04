@@ -1,0 +1,126 @@
+.banner-swiper {
+    width: 12.42rem;
+}
+
+.banner-swiper img {
+    width: 100%;
+}
+
+.banner-swiper .banner-swiper_page {
+    text-align: right;
+    bottom: 0;
+}
+
+.banner-swiper .banner-swiper_page .swiper-pagination-bullet {
+    border: 1px solid #CCCCCC;
+    background: rgba(255, 255, 255, .7);
+    opacity: 1;
+}
+
+.banner-swiper .banner-swiper_page .swiper-pagination-bullet-active {
+    background: #a98e67;
+}
+
+
+/*nav*/
+
+.nav-block {
+    text-align: center;
+    display: flex;
+    display: -webkit-box;
+    flex-direction: row;
+    align-content: space-between;
+    margin-top: 0.65rem;
+}
+
+.nav-list {
+    font-family: 'iconfont';
+    color: #a98e67;
+    font-size: 1.2rem;
+    font-weight: 100;
+}
+
+.nav-block-list {
+    display: block;
+    width: 3.1rem;
+}
+
+.nav-list_name {
+    font-size: .4rem;
+    color: #a98e67;
+}
+
+//section title
+.sectiontitle{
+    margin: 0.71rem 0 0.37rem 0;
+}
+.sec-title{
+    text-align: center;
+    font-size: 0.6rem;
+    color:$baseBlue;
+    
+    letter-spacing: 0.08rem;
+}
+
+.recommendpic{
+    width: 3.03rem;
+    height: 3.03rem;
+    margin: 0 1.75rem 0 1.4rem;
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+.sec-cont{
+    width: 12.4rem;
+     padding: 0 0.4rem 0 0.4rem;
+      .sec-cont-inner{
+       display: flex;
+  display: -webkit-box;
+  flex-direction: row;  
+  align-content: space-between;
+  border-top: $singlepx solid #ddd;
+  padding-top:0.37rem;
+  }
+}
+
+.recommendinfo{
+    padding-top: 0.2rem;
+    ul{
+        li{
+            line-height: 0.9rem;
+        }
+    }
+    .booktitle{
+    font-size: 0.5rem;
+    color:$baseBlue;
+}
+.bookinfo{
+    font-size: 0.4rem;
+    color:$info;
+}
+
+}
+.seemore{
+    font-size: .4rem;
+    color:$baseGold;
+    text-align: center;
+    display: block;
+}
+
+//new book
+.sec-cont-swiper{
+    width: 100%;
+    overflow: hidden;
+    .swiper-slide{
+//      margin-left: 0.6rem;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+        .bookinfo_bottom{
+            width: 100%;
+            font-size: 0.4rem;
+        }
+    }
+}

@@ -8,11 +8,6 @@
 		<link rel="stylesheet" href="mreset.css">
 		<link rel="stylesheet" href="swiper-3.4.2.min.css">
 		<link rel="stylesheet" href="css/scss/base.css" />
-		<style type="text/css">
-			body {
-				height: 3000px;
-			}
-		</style>
 		<script>
 			var desW = 414 * 3;
 
@@ -152,7 +147,7 @@
 		<div class="totop">&#xe64b;</div>
 
 		<script src="zepto.min.js"></script>
-		<script src="swiper-3.4.2.jquery.min.js"></script>
+		<script src="swiper.js"></script>
 		<script>
 			$(function() {
 				//bannerSwiper
@@ -167,8 +162,9 @@
 
 				new Swiper('.sec-cont-swiper .swiper-container', {
 					direction: 'horizontal',					
-					spaceBetween : 18,					
-					slidesPerView : 1.6,
+					spaceBetween : 18,
+                    slidesPerView : 1.7,
+                    slidesPerGroup : 3,
 					iOSEdgeSwipeDetection: true,
 				});
 

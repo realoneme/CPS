@@ -115,8 +115,8 @@ body {
   font-family: 'iconfont';
   color: #8a8a8a;
   position: fixed;
-  right: 0.24rem;
-  bottom: 0.34rem;
+  right: 0.34rem;
+  bottom: 1.34rem;
   width: 1.12rem;
   height: 1.12rem;
   background: #FFF;
@@ -220,8 +220,7 @@ body {
   width: 100%;
   overflow: hidden; }
   .sec-cont-swiper .swiper-slide img {
-    width: 100%;
-    height: 100%; }
+    width: 100%; }
   .sec-cont-swiper .swiper-slide .bookinfo_bottom {
     width: 100%;
     font-size: 0.4rem; }

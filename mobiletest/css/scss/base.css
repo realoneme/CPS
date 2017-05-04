@@ -5,7 +5,9 @@
   src: url("//at.alicdn.com/t/font_hy5lu38h3gd86w29.eot?#iefix") format("embedded-opentype"), url("//at.alicdn.com/t/font_hy5lu38h3gd86w29.woff") format("woff"), url("//at.alicdn.com/t/font_hy5lu38h3gd86w29.ttf") format("truetype"), url("//at.alicdn.com/t/font_hy5lu38h3gd86w29.svg#iconfont") format("svg"); }
 body {
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale; }
+
+main {
   overflow-x: hidden; }
 
 .head {
@@ -240,8 +242,7 @@ body {
 
 .acimg {
   width: 100%;
-  position: relative;
-  overflow-x: hidden; }
+  position: relative; }
   .acimg img {
     width: 100%; }
   .acimg .countblock {

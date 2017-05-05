@@ -1,5 +1,6 @@
 .banner-swiper {
   width: 12.42rem;
+  margin-bottom: 0;
 }
 
 .banner-swiper img {
@@ -29,7 +30,7 @@
   display: -webkit-box;
   flex-direction: row;
   align-content: space-between;
-  margin-top: 0.65rem;
+  //margin-top: 0.65rem;
 }
 
 .nav-list {
@@ -73,13 +74,12 @@
 
 .sec-cont {
   width: 12.4rem;
-  padding: 0 0.4rem 0 0.4rem;
+  &.sec-recommend-cont{
+    padding-bottom: .4rem;
+  }
+
   .sec-cont-inner {
-    display: flex;
-    display: -webkit-box;
-    flex-direction: row;
-    align-content: space-between;
-    border-top: $singlepx solid #ddd;
+    //border-top: $singlepx solid #ddd;
     padding-top: 0.37rem;
   }
 }
@@ -110,16 +110,20 @@
 }
 
 //new book
-.sec-cont-swiper {
+.sec-cont-rows {
   width: 100%;
   overflow: hidden;
+  display: flex;
+  display: -webkit-box;
+  flex-direction: row;
+  align-content: space-between;
   .bookletwrapper {
     margin-left: -.2rem;
   }
   .booklet {
     float: left;
     width: 33.33%;
-    padding-left: .2rem;
+    padding-left: .1rem;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
   }
@@ -128,12 +132,21 @@
     width: 100%;
   }
   .bookinfo_bottom {
-    width: 100%;
-    font-size: 0.4rem;
     text-align: center;
-    display: block;
-    line-height: 1rem;
-    height: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0 0.3rem 0 0.3rem;
+    &.bookinfo_bottom__title{
+      font-size: 0.5rem;
+      line-height: .7rem;
+      height: .7rem;
+    }
+    &.bookinfo_bottom__info{
+      font-size: .4rem;
+      line-height: .6rem;
+      height: .6rem;
+    }
   }
 
 }
@@ -142,22 +155,46 @@
 .acimg {
   width: 100%;
   position: relative;
-
+  .imgmsk {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .3);
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
   img {
     width: 100%;
   }
   .countblock {
     color: #FFF;
-    background: rgba(0, 0, 0, .5);
     padding: 0 .3rem;
     position: absolute;
     height: 1rem;
+    width: 7.8rem;
     font-size: .6rem;
     line-height: 1rem;
-    left: 0.5rem;
+    left: 0;
     top: 0;
     bottom: 0;
+    right: 0;
     margin: auto;
+  }
+
+  .enterpage {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 4.3rem;
+    font-size: .5rem;
+    color: #FFF;
+    border: .7px solid #fff;
+    background: transparent;
+    margin: auto;
+    width: 3rem;
+    text-align: center;
+    height: 1rem;
+    line-height: 1rem;
   }
 
   //animation
@@ -171,7 +208,7 @@
   }
 
   .catjump {
-    background: url("../../miao.png") no-repeat;
+    background: url("../../images/miao.png") no-repeat;
     width: 1.19rem;
     height: 2.15rem;
     transform: rotateY(180deg);
@@ -226,3 +263,80 @@
   }
 }
 
+//two columns display
+.col-two {
+  display: flex;
+  display: -webkit-box;
+  flex-direction: row;
+  align-content: space-between;
+  width: 100%;
+  .innercol {
+    width: 50%;
+    &.lecture_text {
+      background: #f8f8f8;
+      position: relative;
+      padding: 2rem .4rem .3rem .5rem;
+    }
+    .lecture_text-inner {
+      height: 2rem;
+      .lecture_title {
+        font-size: .7rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .lecture_cont {
+        font-size: .4rem;
+        color: #afaba1;
+      }
+    }
+
+  }
+
+}
+.col-two{
+  &.aboutopublish{
+    margin-left: -.1rem;
+    .innercol{
+      padding-left: .1rem;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      .publist{
+        position: relative;
+      }
+      .publistblock{
+        background: rgb(66, 74, 85);
+      }
+      .publistinfo{
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        text-align: center;
+        &.publist_time{
+          border-top: 2px solid $baseGold;
+          padding: .2rem 0;
+          background: rgba(35, 47, 63, 0.4);
+          color:#FFF;
+          font-size: .4rem;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+        }
+        &.publist_title{
+          font-size: .5rem;
+          height: 1rem;
+          line-height: 1rem;
+          color:#FFF;
+        }
+        &.publist_info{
+          font-size: .4rem;
+          color: #FFF;
+
+        }
+      }
+    }
+
+  }
+}

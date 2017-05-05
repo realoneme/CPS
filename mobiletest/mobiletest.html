@@ -5,9 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection"content="telephone=no, email=no" />
     <title>mobileindex</title>
-    <link rel="stylesheet" href="mreset.css">
-    <link rel="stylesheet" href="swiper-3.4.2.min.css">
+    <link rel="stylesheet" href="css/mreset.css">
+    <link rel="stylesheet" href="css/swiper-3.4.2.min.css">
     <link rel="stylesheet" href="css/scss/base.css"/>
     <script>
         var desW = 414 * 3;
@@ -43,13 +46,13 @@
     <section class="banner-swiper">
         <div class="swiper-container">
             <div class="swiper-wrapper">
-                <div class="swiper-slide"><img data-src="b1.jpg" class="swiper-lazy" alt=""/>
+                <div class="swiper-slide"><img data-src="images/b1.jpg" class="swiper-lazy" alt=""/>
                     <div class="swiper-lazy-preloader"></div>
                 </div>
-                <div class="swiper-slide"><img data-src="b2.jpg" class="swiper-lazy"/>
+                <div class="swiper-slide"><img data-src="images/b2.jpg" class="swiper-lazy"/>
                     <div class="swiper-lazy-preloader"></div>
                 </div>
-                <div class="swiper-slide"><img data-src="b3.jpg" class="swiper-lazy"/>
+                <div class="swiper-slide"><img data-src="images/b3.jpg" class="swiper-lazy"/>
                     <div class="swiper-lazy-preloader"></div>
                 </div>
             </div>
@@ -81,9 +84,9 @@
         </div>
 
         <div class="sec-cont sec-recommend-cont">
-            <div class="sec-cont-inner">
+            <div class="sec-cont-inner sec-cont-rows">
                 <div class="recommendpic">
-                    <img src="r17.jpg"/>
+                    <img src="images/r17.jpg"/>
                 </div>
                 <div class="recommendinfo">
                     <ul>
@@ -103,19 +106,22 @@
         </div>
 
         <div class="sec-cont">
-            <div class="sec-cont-inner sec-cont-swiper">
+            <div class="sec-cont-inner sec-cont-rows">
                 <div class="bookletwrapper">
                     <div class="booklet">
-                        <img src="block3.jpg" alt="">
-                        <span class="bookinfo_bottom">冷火</span>
+                        <img src="images/block3.jpg" alt="">
+                        <div class="bookinfo_bottom bookinfo_bottom__title">冷火</div>
+                        <div class=" bookinfo_bottom bookinfo_bottom__info">盾冬</div>
                     </div>
                     <div class="booklet">
-                        <img src="block4.jpg" alt="">
-                        <span class="bookinfo_bottom">冷火</span>
+                        <img src="images/block4.jpg" alt="">
+                        <div class="bookinfo_bottom bookinfo_bottom__title">那一簇鲜花</div>
+                        <div class=" bookinfo_bottom bookinfo_bottom__info">AL</div>
                     </div>
                     <div class="booklet">
-                        <img src="block5.jpg" alt="">
-                        <span class="bookinfo_bottom">冷火</span>
+                        <img src="images/block5.jpg" alt="">
+                        <div class="bookinfo_bottom bookinfo_bottom__title">隔世成情人</div>
+                        <div class=" bookinfo_bottom bookinfo_bottom__info">斯皮克/阿布思</div>
                     </div>
                 </div>
             </div>
@@ -125,10 +131,11 @@
         <div class="sectiontitle">
             <h3 class="sec-title">本月征文活动 <span class="fonticons">&#xe628;</span></h3>
         </div>
-
         <div class="sec-cont">
-            <div class="acimg">
-                <img src="ac.jpg" alt="">
+            <div class="sec-cont-inner">
+                <div class="acimg">
+                    <img src="images/ac.jpg" alt="">
+                    <div class="imgmsk"></div>
                     <div class="countblock">
                         <span>还有</span>
                         <span class="acri"></span><span>天</span>
@@ -136,148 +143,129 @@
                         <span class="acfen"></span><span>分</span>
                         <span class="acmiao"></span><span>秒</span>
                     </div>
-                <div class="catmove">
-                    <div class="catjump" id="J-catmove"></div>
+                    <a href="#" class="enterpage">戳进活动</a>
+                    <div class="catmove">
+                        <div class="catjump" id="J-catmove"></div>
+                    </div>
                 </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="sectiontitle">
+            <h3 class="sec-title">巨巨讲堂 <span class="fonticons">&#xe609;</span></h3>
+        </div>
+        <div class="sec-cont">
+            <div class="sec-cont-inner">
+                <ul class="col-two">
+                    <li class="innercol">
+                        <img src="images/l1.jpg" alt="">
+                    </li>
+                    <li class="innercol lecture_text">
+                        <div class="lecture_text-inner">
+                            <div class="lecture_title">写手说</div>
+                            <div class="lecture_cont">听巨巨悄悄说她的故事</div>
+                        </div>
 
+                    </li>
+                </ul>
+                <ul class="col-two">
+                    <li class="innercol lecture_text">
+                        <div class="lecture_text-inner">
+                            <div class="lecture_title">巨巨爱心教程</div>
+                            <div class="lecture_cont">跟巨巨写文你也是大角虫</div>
+                        </div>
+
+                    </li>
+                    <li class="innercol">
+                        <img src="images/l2.jpg" alt="">
+                    </li>
+                </ul>
+                <ul class="col-two">
+                    <li class="innercol">
+                        <img src="images/l3.jpg" alt="">
+                    </li>
+                    <li class="innercol lecture_text">
+                        <div class="lecture_text-inner">
+                            <div class="lecture_title">叫兽说</div>
+                            <div class="lecture_cont">听老师的话不坑文</div>
+                        </div>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="sectiontitle">
+            <h3 class="sec-title">即将出本 <span class="fonticons">&#xe67c;</span></h3>
+        </div>
+        <div class="sec-cont">
+            <div class="sec-cont-inner">
+                <ul class="col-two aboutopublish">
+                    <li class="innercol">
+                        <div class="publist">
+                            <div class="publistinfo publist_time">2017年5月20日</div>
+                            <img src="images/f1.jpg" alt="">
+                            <ul class="publistblock">
+                                <li class="publistinfo publist_title">我才是王子</li>
+                                <li class="publistinfo publist_info">亚高</li>
+                            </ul>
+                        </div>
+                        <div class="publist">
+                            <div class="publistinfo publist_time">2017年5月20日</div>
+                            <img src="images/f2.jpg" alt="">
+                            <ul class="publistblock">
+                                <li class="publistinfo publist_title">我才是王子</li>
+                                <li class="publistinfo publist_info">亚高</li>
+                            </ul>
+                        </div>
+                        <div class="publist">
+                            <div class="publistinfo publist_time">2017年5月20日</div>
+                            <img src="images/f3.jpg" alt="">
+                            <ul class="publistblock">
+                                <li class="publistinfo publist_title">我才是王子</li>
+                                <li class="publistinfo publist_info">亚高</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="innercol">
+                        <div class="publist">
+                            <div class="publistinfo publist_time">2017年5月20日</div>
+                            <img src="images/f4.jpg" alt="">
+                            <ul class="publistblock">
+                                <li class="publistinfo publist_title">我才是王子</li>
+                                <li class="publistinfo publist_info">亚高</li>
+                            </ul>
+                        </div>
+                        <div class="publist">
+                            <div class="publistinfo publist_time">2017年5月20日</div>
+                            <img src="images/f5.jpg" alt="">
+                            <ul class="publistblock">
+                                <li class="publistinfo publist_title">我才是王子</li>
+                                <li class="publistinfo publist_info">亚高</li>
+                            </ul>
+                        </div>
+                        <div class="publist">
+                            <div class="publistinfo publist_time">2017年5月20日</div>
+                            <img src="images/f6.jpg" alt="">
+                            <ul class="publistblock">
+                                <li class="publistinfo publist_title">我才是王子</li>
+                                <li class="publistinfo publist_info">亚高</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
     </section>
 </main>
 <div class="totop">&#xe64b;</div>
 
-<script src="zepto.min.js"></script>
-<script src="touch.min.js"></script>
-<script src="swiper-3.4.2.jquery.min.js"></script>
-<script>
-
-    $(function () {
-        //public
-
-        //bannerSwiper
-        new Swiper('.banner-swiper .swiper-container', {
-            direction: 'horizontal',
-            loop: true,
-            autoplay: 2500,
-            autoplayDisableOnInteraction: false,
-            lazyLoading: true,
-            pagination: '.swiper-pagination'
-        });
-
-       var s2 = new Swiper('.J-manSwiper_wrapper', {
-           effect : 'coverflow',
-           slidesPerView: 3,
-           centeredSlides: true,
-           coverflow: {
-               rotate: 30,
-               stretch: 10,
-               depth: 60,
-               modifier: 2,
-               slideShadows : true
-           }
-        });
-
-
-        function scrollEvent() {
-            $(window).on('scroll', function () {
-                var $st = $(this).scrollTop();
-                var $header = $('.head');
-                if ($st > 1) {
-                    $header.addClass('fixhead');
-                } else {
-                    $header.removeClass('fixhead');
-                }
-
-                if ($st > 3 * window.fSize) {
-                    $('.totop').css('opacity', 1);
-                } else {
-                    $('.totop').css('opacity', 0);
-                }
-
-            })
-        }
-
-        function acCount() {
-            countDown({
-                time:'2017/5/6 18:35:41',
-                dayTime:'.acri',
-                hourTime:'.acshi',
-                minTime:'.acfen',
-                sTime:'.acmiao',
-                word:'.countblock'
-            });
-            function countDown(o) {
-                function getTime() {
-                    var endTime = new Date(o.time);
-                    var nowTime = new Date();
-                    var t = endTime.getTime() - nowTime.getTime();
-                    var d = Math.floor(t / (1000 * 60 * 60 * 24));
-                    var h = Math.floor(t % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
-                    var m = Math.floor(t % (1000 * 60 * 60) / (1000 * 60));
-                    var s = Math.floor(t % (1000 * 60) / 1000);
-                    var dTime = o.dayTime, hTime = o.hourTime, mTime = o.minTime, sTime = o.sTime, sNotice = o.word;
-                    $(dTime).html(d);
-                    $(hTime).html(h);
-                    $(mTime).html(m);
-                    $(sTime).html(s);
-                    if (d <= 0) {
-                        $(dTime).html("0" + d)
-                    } else {
-                        if (h <= 9 && h >= 0) {
-                            $(hTime).html("0" + h)
-                        } else {
-                            if (m <= 9 && m >= 0) {
-                                $(mTime).html("0" + m)
-                            } else {
-                                if (s <= 9 && s >= 0) {
-                                    $(sTime).html("0" + s)
-                                }
-                            }
-                        }
-                    }
-                    if (m <= 0 && s <= 0) {
-                        clearInterval(o.timer);
-                        if (sNotice) {
-                            $(sNotice).html('活动已经结束了哦');
-                            return
-                        }
-                    }
-                    if (t <= 0) {
-                        $(dTime).html(0);
-                        $(hTime).html(0);
-                        $(mTime).html(0);
-                        $(sTime).html(0);
-                        clearInterval(o.timer)
-                    }
-                }
-
-               o.timer = setInterval(getTime, 1000)
-            }
-
-        }
-
-        function catMove() {
-            var catAni = $('#J-catmove');
-            window.setInterval(function () {
-                if(catAni.hasClass('reversecat')){
-                    catAni.removeClass('reversecat');
-                }else{
-                    catAni.addClass('reversecat');
-                }
-
-            },10000)
-        }
-
-        if ($('.totop').length) {
-            $('.totop').click(function () {
-                $('body').scrollTop(0);
-            })
-        }
-        scrollEvent();
-        acCount();
-        catMove();
-    })
-</script>
+<script src="js/zepto.min.js"></script>
+<!--<script src="touch.min.js"></script>-->
+<script src="js/swiper-3.4.2.jquery.min.js"></script>
+<script src="js/index.js"></script>
 </body>
 
 </html>

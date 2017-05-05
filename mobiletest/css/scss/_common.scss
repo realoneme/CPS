@@ -6,11 +6,11 @@ $singlepx: 0.7px;
 //fontFamily
 @font-face {
   font-family: 'iconfont';  /* project id 290873 */
-  src: url('//at.alicdn.com/t/font_hy5lu38h3gd86w29.eot');
-  src: url('//at.alicdn.com/t/font_hy5lu38h3gd86w29.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_hy5lu38h3gd86w29.woff') format('woff'),
-  url('//at.alicdn.com/t/font_hy5lu38h3gd86w29.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_hy5lu38h3gd86w29.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_7fy632083kn019k9.eot');
+  src: url('//at.alicdn.com/t/font_7fy632083kn019k9.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_7fy632083kn019k9.woff') format('woff'),
+  url('//at.alicdn.com/t/font_7fy632083kn019k9.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_7fy632083kn019k9.svg#iconfont') format('svg');
 }
 
 @mixin bz($w,$h){
@@ -31,8 +31,18 @@ body {
 }
 main{
   overflow-x: hidden;
+  background: #f4f4f4;
 }
-
+nav{
+  background: #fff;
+  padding:.2rem 0;
+  margin-bottom: .2rem;
+}
+section{
+  background: #fff;
+  padding:.2rem 0 0;
+  margin-bottom: .2rem;
+}
 .head {
   height: 1.45rem;
   //  background: $baseBlue;

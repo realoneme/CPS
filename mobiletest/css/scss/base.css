@@ -1,14 +1,25 @@
 @font-face {
   font-family: 'iconfont';
   /* project id 290873 */
-  src: url("//at.alicdn.com/t/font_hy5lu38h3gd86w29.eot");
-  src: url("//at.alicdn.com/t/font_hy5lu38h3gd86w29.eot?#iefix") format("embedded-opentype"), url("//at.alicdn.com/t/font_hy5lu38h3gd86w29.woff") format("woff"), url("//at.alicdn.com/t/font_hy5lu38h3gd86w29.ttf") format("truetype"), url("//at.alicdn.com/t/font_hy5lu38h3gd86w29.svg#iconfont") format("svg"); }
+  src: url("//at.alicdn.com/t/font_7fy632083kn019k9.eot");
+  src: url("//at.alicdn.com/t/font_7fy632083kn019k9.eot?#iefix") format("embedded-opentype"), url("//at.alicdn.com/t/font_7fy632083kn019k9.woff") format("woff"), url("//at.alicdn.com/t/font_7fy632083kn019k9.ttf") format("truetype"), url("//at.alicdn.com/t/font_7fy632083kn019k9.svg#iconfont") format("svg"); }
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
 main {
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  background: #f4f4f4; }
+
+nav {
+  background: #fff;
+  padding: .2rem 0;
+  margin-bottom: .2rem; }
+
+section {
+  background: #fff;
+  padding: .2rem 0 0;
+  margin-bottom: .2rem; }
 
 .head {
   height: 1.45rem;
@@ -134,7 +145,8 @@ main {
   color: #a0a0a0; }
 
 .banner-swiper {
-  width: 12.42rem; }
+  width: 12.42rem;
+  margin-bottom: 0; }
 
 .banner-swiper img {
   width: 100%; }
@@ -157,8 +169,7 @@ main {
   display: flex;
   display: -webkit-box;
   flex-direction: row;
-  align-content: space-between;
-  margin-top: 0.65rem; }
+  align-content: space-between; }
 
 .nav-list {
   font-family: 'iconfont';
@@ -192,14 +203,10 @@ main {
     height: 100%; }
 
 .sec-cont {
-  width: 12.4rem;
-  padding: 0 0.4rem 0 0.4rem; }
+  width: 12.4rem; }
+  .sec-cont.sec-recommend-cont {
+    padding-bottom: .4rem; }
   .sec-cont .sec-cont-inner {
-    display: flex;
-    display: -webkit-box;
-    flex-direction: row;
-    align-content: space-between;
-    border-top: 0.7px solid #ddd;
     padding-top: 0.37rem; }
 
 .recommendinfo {
@@ -219,44 +226,77 @@ main {
   text-align: center;
   display: block; }
 
-.sec-cont-swiper {
+.sec-cont-rows {
   width: 100%;
-  overflow: hidden; }
-  .sec-cont-swiper .bookletwrapper {
+  overflow: hidden;
+  display: flex;
+  display: -webkit-box;
+  flex-direction: row;
+  align-content: space-between; }
+  .sec-cont-rows .bookletwrapper {
     margin-left: -.2rem; }
-  .sec-cont-swiper .booklet {
+  .sec-cont-rows .booklet {
     float: left;
     width: 33.33%;
-    padding-left: .2rem;
+    padding-left: .1rem;
     -webkit-box-sizing: border-box;
     box-sizing: border-box; }
-  .sec-cont-swiper img {
+  .sec-cont-rows img {
     width: 100%; }
-  .sec-cont-swiper .bookinfo_bottom {
-    width: 100%;
-    font-size: 0.4rem;
+  .sec-cont-rows .bookinfo_bottom {
     text-align: center;
-    display: block;
-    line-height: 1rem;
-    height: 1rem; }
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0 0.3rem 0 0.3rem; }
+    .sec-cont-rows .bookinfo_bottom.bookinfo_bottom__title {
+      font-size: 0.5rem;
+      line-height: .7rem;
+      height: .7rem; }
+    .sec-cont-rows .bookinfo_bottom.bookinfo_bottom__info {
+      font-size: .4rem;
+      line-height: .6rem;
+      height: .6rem; }
 
 .acimg {
   width: 100%;
   position: relative; }
+  .acimg .imgmsk {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    left: 0;
+    top: 0; }
   .acimg img {
     width: 100%; }
   .acimg .countblock {
     color: #FFF;
-    background: rgba(0, 0, 0, 0.5);
     padding: 0 .3rem;
     position: absolute;
     height: 1rem;
+    width: 7.8rem;
     font-size: .6rem;
     line-height: 1rem;
-    left: 0.5rem;
+    left: 0;
     top: 0;
     bottom: 0;
+    right: 0;
     margin: auto; }
+  .acimg .enterpage {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 4.3rem;
+    font-size: .5rem;
+    color: #FFF;
+    border: .7px solid #fff;
+    background: transparent;
+    margin: auto;
+    width: 3rem;
+    text-align: center;
+    height: 1rem;
+    line-height: 1rem; }
   .acimg .catmove {
     position: absolute;
     top: -2.15rem;
@@ -264,7 +304,7 @@ main {
     animation: catwalk 10s ease infinite alternate;
     -webkit-animation: catwalk 10s ease infinite alternate; }
   .acimg .catjump {
-    background: url("../../miao.png") no-repeat;
+    background: url("../../images/miao.png") no-repeat;
     width: 1.19rem;
     height: 2.15rem;
     transform: rotateY(180deg);
@@ -297,5 +337,62 @@ main {
     left: -2rem; }
   to {
     left: 12.42rem; } }
+.col-two {
+  display: flex;
+  display: -webkit-box;
+  flex-direction: row;
+  align-content: space-between;
+  width: 100%; }
+  .col-two .innercol {
+    width: 50%; }
+    .col-two .innercol.lecture_text {
+      background: #f8f8f8;
+      position: relative;
+      padding: 2rem .4rem .3rem .5rem; }
+    .col-two .innercol .lecture_text-inner {
+      height: 2rem; }
+      .col-two .innercol .lecture_text-inner .lecture_title {
+        font-size: .7rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis; }
+      .col-two .innercol .lecture_text-inner .lecture_cont {
+        font-size: .4rem;
+        color: #afaba1; }
+
+.col-two.aboutopublish {
+  margin-left: -.1rem; }
+  .col-two.aboutopublish .innercol {
+    padding-left: .1rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+    .col-two.aboutopublish .innercol .publist {
+      position: relative; }
+    .col-two.aboutopublish .innercol .publistblock {
+      background: #424a55; }
+    .col-two.aboutopublish .innercol .publistinfo {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      text-align: center; }
+      .col-two.aboutopublish .innercol .publistinfo.publist_time {
+        border-top: 2px solid #a98e67;
+        padding: .2rem 0;
+        background: rgba(35, 47, 63, 0.4);
+        color: #FFF;
+        font-size: .4rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%; }
+      .col-two.aboutopublish .innercol .publistinfo.publist_title {
+        font-size: .5rem;
+        height: 1rem;
+        line-height: 1rem;
+        color: #FFF; }
+      .col-two.aboutopublish .innercol .publistinfo.publist_info {
+        font-size: .4rem;
+        color: #FFF; }
 
 /*# sourceMappingURL=base.css.map */
